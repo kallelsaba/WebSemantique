@@ -1,4 +1,5 @@
 🎓 Projet Ontologie – Domaine de l'Éducation
+
 📘 Description du projet
 L'éducation, en tant que secteur en constante évolution, génère une multitude d'informations concernant les étudiants, enseignants, départements et cours, informations essentielles au bon fonctionnement des institutions académiques. Avec l'augmentation des systèmes numériques et des plateformes éducatives, la gestion des données devient un véritable défi, car elles proviennent de sources diverses, telles que les inscriptions, les évaluations, les emplois du temps, etc. Cependant, ces données sont souvent dispersées, non structurées et difficiles à exploiter efficacement.
 L'objectif est de faciliter l'accès et la gestion des informations pour les différents acteurs du système éducatif (étudiants, enseignants, gestionnaires). 
@@ -19,9 +20,6 @@ Le projet a été développé avec l'outil **Protégé**, en utilisant des names
 4. **Richesse sémantique** : L'ontologie capture non seulement les données, mais aussi leur signification et leurs relations.
 5. **Requêtes complexes** : SPARQL permet d’interroger des relations directes, indirectes et inférées, difficilement faisables avec SQL.
 Cette ontologie offre une vue globale et structurée des entités éducatives et leurs interactions.
-
-🧱 Structure de l'ontologie
-
 
 🛠️ Technologies utilisées
 - Protégé est un Outil de développement pour les ontologies.
@@ -74,7 +72,7 @@ Pour cloner ce projet, suivez ces étapes :
 1. Ouvrez votre terminal ou invite de commande.
 2. Exécutez la commande suivante pour cloner le dépôt :
    ```bash
-   git clone https://github.com/votre-utilisateur/ontologie-education.git
+   git clone https://github.com/kallelsaba/WebSemantique.git
 ✨ Auteurs
 Saba Kallel
 Oumayma Khlif
