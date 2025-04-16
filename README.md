@@ -36,10 +36,13 @@ Cette ontologie offre une vue globale et structurée des entités éducatives et
 - RDFS est un vocabulaire RDF utilisé pour définir des classes, des propriétés et des relations entre les ressources : [http://www.w3.org/2000/01/rdf-schema#]
 
 💻 Installation et utilisation
-✅ Prérequis
-Avant de pouvoir utiliser le projet, vous devez installer **Protégé**, un outil qui vous permet de visualiser et de manipuler des ontologies.
+
+✅ Prérequis: Avant de pouvoir utiliser le projet, vous devez installer **Protégé**, un outil qui vous permet de visualiser et de manipuler des ontologies.
+
 🔽 Installation de Protégé
+
 🔗 Télécharger depuis : protege.stanford.edu
+
 🖥️ Installer selon votre système (Windows/macOS/Linux)
 
 📂 Importation de l'ontologie dans Protégé
