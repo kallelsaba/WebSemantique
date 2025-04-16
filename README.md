@@ -49,7 +49,7 @@ Ouvrir Protégé.
 Aller dans File > Open.
 
 
-Télécharger le fichier .ttl, .rdf ou .owl depuis le dépôt GitHub.
+Télécharger le fichier .rdf depuis le dépôt GitHub.
 
 
 Charger le fichier.
@@ -64,6 +64,7 @@ Dans Protégé, vous pouvez :
 - Examiner les propriétés reliant les entités.
 - Visualiser des graphes relationnels.
 - Écrire et exécuter des requêtes SPARQL pour interroger les données.
+
 📄 Note : Un fichier nommé requêtes_sparql.txt contenant plusieurs exemples de requêtes SPARQL est déjà présent dans ce dépôt.
 Tu peux le consulter pour explorer l’ontologie directement depuis Protégé.
 
@@ -73,6 +74,8 @@ Pour cloner ce projet, suivez ces étapes :
 2. Exécutez la commande suivante pour cloner le dépôt :
    ```bash
    git clone https://github.com/kallelsaba/WebSemantique.git
+
 ✨ Auteurs
 Saba Kallel
+
 Oumayma Khlif
