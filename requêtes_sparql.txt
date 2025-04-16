@@ -1,0 +1,105 @@
+##############################################
+# Fichier : requêtes_sparql.txt
+# Description : Requêtes SPARQL pour explorer l’ontologie du système universitaire
+# Auteur : Oumayma Khlif && Saba Kallel
+##############################################
+
+# ---------------------------------------------------------
+# 1. Lister toutes les classes définies dans l'ontologie 
+Cette requête SPARQL permet de lister toutes les classes définies dans l'ontologie. Elle filtre les résultats pour n’inclure que celles appartenant à l’espace de noms propre à votre ontologie. Elle récupère également les étiquettes si elles sont disponibles, pour une lecture plus intuitive.
+# ---------------------------------------------------------
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT DISTINCT ?class ?label
+WHERE {
+  { ?class a owl:Class. }
+  UNION
+  { ?class a rdfs:Class. }
+  # Filtrer pour inclure uniquement les classes de votre ontologie
+  # Remplacez "example.org" par votre espace de noms
+  FILTER(REGEX(STR(?class), "example.org"))
+  OPTIONAL { ?class rdfs:label ?label. }
+}
+ORDER BY ?class
+
+
+
+# ---------------------------------------------------------
+# 2. Vérification de la conformité des types des valeurs par rapport aux propriétés définies
+Cette requête SPARQL permet de vérifier les erreurs de typage dans les données RDF en identifiant les instances où la valeur d'une propriété ne correspond pas au type attendu, comme une chaîne de caractères alors qu'un nombre décimal est requis.
+# ---------------------------------------------------------
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT ?instance ?class ?property ?value ?range
+WHERE {
+  ?instance a ?class .
+  ?property rdfs:domain ?class .
+  ?property rdfs:range ?range .
+  ?instance ?property ?value .
+
+  FILTER(
+    isLiteral(?value) &&
+    isIRI(?range) &&
+    DATATYPE(?value) != ?range &&
+    ?range != rdfs:Literal
+  )
+}
+
+
+
+# ---------------------------------------------------------
+# 3. visualiser la hiérarchie complète
+Cette requête affiche toutes les relations de sous-classe directes dans votre ontologie. Elle donne une vue d'ensemble de la structure hiérarchique des concepts.
+# ---------------------------------------------------------
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+
+SELECT ?subClass ?superClass
+WHERE {
+  ?subClass rdfs:subClassOf ?superClass .
+  
+  # Filtrer pour n'inclure que les classes de votre ontologie
+  FILTER(REGEX(STR(?subClass), "example.org"))
+  
+  # Exclure les relations d'identité (une classe est toujours sous-classe d'elle-même)
+  FILTER(?subClass != ?superClass)
+  
+  # Exclure owl:Thing qui est la super-classe de toutes les classes
+  FILTER(?superClass != owl:Thing)
+}
+ORDER BY ?superClass ?subClass
+# ---------------------------------------------------------
+# 4. détecter les instances "Etudiant" avec des valeurs d'attributs manquantes
+Cette requête identifie les instances qui manquent de valeurs pour des attributs considérés comme importants, en fonction de leur classe.
+# ---------------------------------------------------------
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX univ: <http://www.example.org/university#>
+
+SELECT ?etudiant ?attributManquant
+WHERE {
+  # Sélectionner tous les étudiants
+  ?etudiant a univ:Etudiant .
+  
+  # Liste des attributs importants pour un étudiant
+  VALUES ?attributManquant {
+    univ:nom
+    univ:prenom
+    univ:numeroEtudiant
+    univ:email
+    univ:dateNaissance
+    univ:adresse
+    univ:telephone
+  }
+  
+  # Vérifier l'absence de l'attribut
+  FILTER NOT EXISTS { ?etudiant ?attributManquant ?quelqueValeur . }
+}
+ORDER BY ?etudiant ?attributManquant
+
+# Fin du fichier
