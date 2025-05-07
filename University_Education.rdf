@@ -1,0 +1,3061 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.example.org/university#"
+     xml:base="http://www.example.org/university"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:time="http://www.w3.org/2006/time#"
+     xmlns:univ="http://www.example.org/university#"
+     xmlns:aiiso="http://purl.org/vocab/aiiso/schema#"
+     xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+     xmlns:teach="http://linkedscience.org/teach/ns#"
+     xmlns:vcard="http://www.w3.org/2006/vcard/ns#"
+     xmlns:schema="http://schema.org/"
+     xmlns:dcterms="http://purl.org/dc/terms/">
+    <owl:Ontology rdf:about="http://www.example.org/university">
+        <dc:creator xml:lang="fr">Saba Kallel &amp; Oumayma Khlif</dc:creator>
+        <dc:description xml:lang="fr">Cette ontologie modélise le système universitaire en représentant les acteurs (étudiants, enseignants), les entités académiques (cours, modules, départements) et leurs relations (inscription, enseignement, évaluation). Elle permet de structurer les données éducatives pour une meilleure gestion et analyse.</dc:description>
+        <dc:title xml:lang="fr">Ontologie du système universitaire</dc:title>
+        <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-04-05</dcterms:created>
+        <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-04-15</dcterms:modified>
+        <rdfs:comment xml:lang="fr">Cette ontologie modélise un système universitaire complet</rdfs:comment>
+        <owl:versionInfo>1.0</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://linkedscience.org/teach/ns#attends -->
+
+    <owl:AnnotationProperty rdf:about="http://linkedscience.org/teach/ns#attends"/>
+    
+
+
+    <!-- http://linkedscience.org/teach/ns#ects -->
+
+    <owl:AnnotationProperty rdf:about="http://linkedscience.org/teach/ns#ects"/>
+    
+
+
+    <!-- http://linkedscience.org/teach/ns#teaches -->
+
+    <owl:AnnotationProperty rdf:about="http://linkedscience.org/teach/ns#teaches"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/creator -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/date -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/date"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/description -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/language -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/language"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/publisher -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/publisher"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/rights -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/rights"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/subject -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/subject"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/title -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/type -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/type"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/created -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/created"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/creator -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/identifier -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/identifier"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/isPartOf -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/isPartOf"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/modified -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/modified"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/temporal -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/temporal"/>
+    
+
+
+    <!-- http://schema.org/about -->
+
+    <owl:AnnotationProperty rdf:about="http://schema.org/about"/>
+    
+
+
+    <!-- http://schema.org/address -->
+
+    <owl:AnnotationProperty rdf:about="http://schema.org/address"/>
+    
+
+
+    <!-- http://schema.org/addressCountry -->
+
+    <owl:AnnotationProperty rdf:about="http://schema.org/addressCountry"/>
+    
+
+
+    <!-- http://schema.org/addressLocality -->
+
+    <owl:AnnotationProperty rdf:about="http://schema.org/addressLocality"/>
+    
+
+
+    <!-- http://schema.org/alumni -->
+
+    <owl:AnnotationProperty rdf:about="http://schema.org/alumni"/>
+    
+
+
+    <!-- http://schema.org/assessment -->
+
+    <owl:AnnotationProperty rdf:about="http://schema.org/assessment"/>
+    
+
+
+    <!-- http://schema.org/attends -->
+
+    <owl:AnnotationProperty rdf:about="http://schema.org/attends"/>
+    
+
+
+    <!-- http://schema.org/author -->
+
+    <owl:AnnotationProperty rdf:about="http://schema.org/author"/>
+    
+
+
+    <!-- http://schema.org/bestRating -->
+
+    <owl:AnnotationProperty rdf:about="http://schema.org/bestRating"/>
+    
+
+
+    <!-- http://schema.org/containedInPlace -->
+
+    <owl:AnnotationProperty rdf:about="http://schema.org/containedInPlace"/>
+    
+
+
+    <!-- http://schema.org/courseCode -->
+
+    <owl:AnnotationProperty rdf:about="http://schema.org/courseCode"/>
+    
+
+
+    <!-- http://schema.org/duration -->
+
+    <owl:AnnotationProperty rdf:about="http://schema.org/duration"/>
+    
+
+
+    <!-- http://schema.org/educationalLevel -->
+
+    <owl:AnnotationProperty rdf:about="http://schema.org/educationalLevel"/>
+    
+
+
+    <!-- http://schema.org/email -->
+
+    <owl:AnnotationProperty rdf:about="http://schema.org/email"/>
+    
+
+
+    <!-- http://schema.org/employee -->
+
+    <owl:AnnotationProperty rdf:about="http://schema.org/employee"/>
+    
+
+
+    <!-- http://schema.org/endDate -->
+
+    <owl:AnnotationProperty rdf:about="http://schema.org/endDate"/>
+    
+
+
+    <!-- http://schema.org/endTime -->
+
+    <owl:AnnotationProperty rdf:about="http://schema.org/endTime"/>
+    
+
+
+    <!-- http://schema.org/funder -->
+
+    <owl:AnnotationProperty rdf:about="http://schema.org/funder"/>
+    
+
+
+    <!-- http://schema.org/jobTitle -->
+
+    <owl:AnnotationProperty rdf:about="http://schema.org/jobTitle"/>
+    
+
+
+    <!-- http://schema.org/location -->
+
+    <owl:AnnotationProperty rdf:about="http://schema.org/location"/>
+    
+
+
+    <!-- http://schema.org/maximumAttendeeCapacity -->
+
+    <owl:AnnotationProperty rdf:about="http://schema.org/maximumAttendeeCapacity"/>
+    
+
+
+    <!-- http://schema.org/memberOf -->
+
+    <owl:AnnotationProperty rdf:about="http://schema.org/memberOf"/>
+    
+
+
+    <!-- http://schema.org/name -->
+
+    <owl:AnnotationProperty rdf:about="http://schema.org/name"/>
+    
+
+
+    <!-- http://schema.org/numberOfCredits -->
+
+    <owl:AnnotationProperty rdf:about="http://schema.org/numberOfCredits"/>
+    
+
+
+    <!-- http://schema.org/participant -->
+
+    <owl:AnnotationProperty rdf:about="http://schema.org/participant"/>
+    
+
+
+    <!-- http://schema.org/postalCode -->
+
+    <owl:AnnotationProperty rdf:about="http://schema.org/postalCode"/>
+    
+
+
+    <!-- http://schema.org/provider -->
+
+    <owl:AnnotationProperty rdf:about="http://schema.org/provider"/>
+    
+
+
+    <!-- http://schema.org/ratingValue -->
+
+    <owl:AnnotationProperty rdf:about="http://schema.org/ratingValue"/>
+    
+
+
+    <!-- http://schema.org/recipient -->
+
+    <owl:AnnotationProperty rdf:about="http://schema.org/recipient"/>
+    
+
+
+    <!-- http://schema.org/result -->
+
+    <owl:AnnotationProperty rdf:about="http://schema.org/result"/>
+    
+
+
+    <!-- http://schema.org/reviewRating -->
+
+    <owl:AnnotationProperty rdf:about="http://schema.org/reviewRating"/>
+    
+
+
+    <!-- http://schema.org/specialty -->
+
+    <owl:AnnotationProperty rdf:about="http://schema.org/specialty"/>
+    
+
+
+    <!-- http://schema.org/startDate -->
+
+    <owl:AnnotationProperty rdf:about="http://schema.org/startDate"/>
+    
+
+
+    <!-- http://schema.org/startTime -->
+
+    <owl:AnnotationProperty rdf:about="http://schema.org/startTime"/>
+    
+
+
+    <!-- http://schema.org/streetAddress -->
+
+    <owl:AnnotationProperty rdf:about="http://schema.org/streetAddress"/>
+    
+
+
+    <!-- http://schema.org/teaches -->
+
+    <owl:AnnotationProperty rdf:about="http://schema.org/teaches"/>
+    
+
+
+    <!-- http://schema.org/telephone -->
+
+    <owl:AnnotationProperty rdf:about="http://schema.org/telephone"/>
+    
+
+
+    <!-- http://schema.org/temporalCoverage -->
+
+    <owl:AnnotationProperty rdf:about="http://schema.org/temporalCoverage"/>
+    
+
+
+    <!-- http://schema.org/url -->
+
+    <owl:AnnotationProperty rdf:about="http://schema.org/url"/>
+    
+
+
+    <!-- http://schema.org/weight -->
+
+    <owl:AnnotationProperty rdf:about="http://schema.org/weight"/>
+    
+
+
+    <!-- http://schema.org/worksFor -->
+
+    <owl:AnnotationProperty rdf:about="http://schema.org/worksFor"/>
+    
+
+
+    <!-- http://schema.org/worstRating -->
+
+    <owl:AnnotationProperty rdf:about="http://schema.org/worstRating"/>
+    
+
+
+    <!-- http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled -->
+
+    <owl:AnnotationProperty rdf:about="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+    
+
+
+    <!-- http://www.w3.org/2003/01/geo/wgs84_pos#lat -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#lat"/>
+    
+
+
+    <!-- http://www.w3.org/2003/01/geo/wgs84_pos#long -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#long"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#altLabel -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#altLabel"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#broader -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#broader"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#definition -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#definition"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#inScheme -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#inScheme"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#notation -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#notation"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#prefLabel -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#prefLabel"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#related -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#related"/>
+    
+
+
+    <!-- http://www.w3.org/2006/time#hasBeginning -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2006/time#hasBeginning"/>
+    
+
+
+    <!-- http://www.w3.org/2006/time#hasEnd -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2006/time#hasEnd"/>
+    
+
+
+    <!-- http://www.w3.org/2006/time#inXSDDate -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2006/time#inXSDDate"/>
+    
+
+
+    <!-- http://www.w3.org/2006/vcard/ns#country-name -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2006/vcard/ns#country-name"/>
+    
+
+
+    <!-- http://www.w3.org/2006/vcard/ns#hasAddress -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2006/vcard/ns#hasAddress"/>
+    
+
+
+    <!-- http://www.w3.org/2006/vcard/ns#locality -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2006/vcard/ns#locality"/>
+    
+
+
+    <!-- http://www.w3.org/2006/vcard/ns#postal-code -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2006/vcard/ns#postal-code"/>
+    
+
+
+    <!-- http://www.w3.org/2006/vcard/ns#street-address -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2006/vcard/ns#street-address"/>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/birthday -->
+
+    <owl:AnnotationProperty rdf:about="http://xmlns.com/foaf/0.1/birthday"/>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/familyName -->
+
+    <owl:AnnotationProperty rdf:about="http://xmlns.com/foaf/0.1/familyName"/>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/givenName -->
+
+    <owl:AnnotationProperty rdf:about="http://xmlns.com/foaf/0.1/givenName"/>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/homepage -->
+
+    <owl:AnnotationProperty rdf:about="http://xmlns.com/foaf/0.1/homepage"/>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/img -->
+
+    <owl:AnnotationProperty rdf:about="http://xmlns.com/foaf/0.1/img"/>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/interest -->
+
+    <owl:AnnotationProperty rdf:about="http://xmlns.com/foaf/0.1/interest"/>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/knows -->
+
+    <owl:AnnotationProperty rdf:about="http://xmlns.com/foaf/0.1/knows"/>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/mbox -->
+
+    <owl:AnnotationProperty rdf:about="http://xmlns.com/foaf/0.1/mbox"/>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/name -->
+
+    <owl:AnnotationProperty rdf:about="http://xmlns.com/foaf/0.1/name"/>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/title -->
+
+    <owl:AnnotationProperty rdf:about="http://xmlns.com/foaf/0.1/title"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#date -->
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#date"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.example.org/university#PrépareÉvaluation -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.org/university#PrépareÉvaluation">
+        <owl:equivalentProperty rdf:resource="http://www.example.org/university#prepare"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.example.org/university#prepare"/>
+        <rdfs:domain rdf:resource="http://www.example.org/university#Enseignant"/>
+        <rdfs:domain rdf:resource="http://www.example.org/university#Personne"/>
+        <rdfs:domain rdf:resource="http://www.example.org/university#PersonnelUniversitaire"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.example.org/university#Enseignant"/>
+                    <rdf:Description rdf:about="http://www.example.org/university#PersonnelAdministratif"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://schema.org/Action"/>
+        <rdfs:range rdf:resource="http://www.example.org/university#Evaluation"/>
+        <rdfs:comment xml:lang="fr">Un enseignant prépare une évaluation</rdfs:comment>
+        <rdfs:label xml:lang="fr">prépare évaluation</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.example.org/university#aRéussiModule -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.org/university#aRéussiModule">
+        <rdfs:domain rdf:resource="http://www.example.org/university#Etudiant"/>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.example.org/university#suit"/>
+                <owl:someValuesFrom rdf:resource="http://www.example.org/university#Cours"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.example.org/university#estInscritA"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.example.org/university#Module"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="http://www.example.org/university#appartientA"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:range>
+        <rdfs:comment xml:lang="fr">Un étudiant a réussi un module</rdfs:comment>
+        <rdfs:label xml:lang="fr">a réussi module</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.example.org/university#appartientA -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.org/university#appartientA">
+        <owl:equivalentProperty rdf:resource="http://www.example.org/university#faitPartieDe"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.example.org/university#faitPartieDe"/>
+        <rdfs:domain rdf:resource="http://schema.org/Course"/>
+        <rdfs:domain rdf:resource="http://www.example.org/university#Cours"/>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.example.org/university#dureeHeures"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.example.org/university#Module"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="http://www.example.org/university#appartientA"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:range>
+        <rdfs:comment xml:lang="fr">Un cours appartient à un module</rdfs:comment>
+        <rdfs:label xml:lang="fr">appartient à</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.example.org/university#attribue -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.org/university#attribue">
+        <rdfs:domain rdf:resource="http://schema.org/Action"/>
+        <rdfs:domain rdf:resource="http://www.example.org/university#Evaluation"/>
+        <rdfs:range rdf:resource="http://schema.org/Rating"/>
+        <rdfs:range rdf:resource="http://www.example.org/university#Note"/>
+        <rdfs:comment xml:lang="fr">Une évaluation attribue une note</rdfs:comment>
+        <rdfs:label xml:lang="fr">attribue</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.example.org/university#connait -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.org/university#connait">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.example.org/university#Personne"/>
+        <rdfs:range rdf:resource="http://www.example.org/university#Personne"/>
+        <rdfs:comment xml:lang="fr">Une personne connaît une autre personne</rdfs:comment>
+        <rdfs:label xml:lang="fr">connaît</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.example.org/university#dirige -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.org/university#dirige">
+        <owl:inverseOf rdf:resource="http://www.example.org/university#estDirigePar"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://schema.org/Person"/>
+        <rdfs:domain rdf:resource="http://www.example.org/university#Enseignant"/>
+        <rdfs:domain rdf:resource="http://www.example.org/university#Personne"/>
+        <rdfs:domain rdf:resource="http://www.example.org/university#PersonnelUniversitaire"/>
+        <rdfs:range rdf:resource="http://www.example.org/university#Departement"/>
+        <rdfs:comment xml:lang="fr">Un enseignant dirige un département</rdfs:comment>
+        <rdfs:label xml:lang="fr">dirige</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.example.org/university#encadre -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.org/university#encadre">
+        <rdfs:domain rdf:resource="http://www.example.org/university#Enseignant"/>
+        <rdfs:domain rdf:resource="http://www.example.org/university#PersonnelUniversitaire"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.example.org/university#Enseignant"/>
+                    <rdf:Description rdf:about="http://www.example.org/university#PersonnelAdministratif"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.example.org/university#Departement"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.example.org/university#estDirigePar"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:range>
+        <rdfs:comment xml:lang="fr">Un enseignant encadre un département</rdfs:comment>
+        <rdfs:label xml:lang="fr">encadre</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.example.org/university#enseigne -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.org/university#enseigne">
+        <rdfs:domain rdf:resource="http://schema.org/Person"/>
+        <rdfs:domain rdf:resource="http://www.example.org/university#Enseignant"/>
+        <rdfs:domain rdf:resource="http://www.example.org/university#Personne"/>
+        <rdfs:domain rdf:resource="http://www.example.org/university#PersonnelUniversitaire"/>
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.example.org/university#Enseignant"/>
+                    <rdf:Description rdf:about="http://www.example.org/university#PersonnelAdministratif"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://schema.org/Course"/>
+        <rdfs:range rdf:resource="http://www.example.org/university#Cours"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.example.org/university#dureeHeures"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:range>
+        <rdfs:comment xml:lang="fr">Un enseignant enseigne un cours</rdfs:comment>
+        <rdfs:label xml:lang="fr">enseigne</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.example.org/university#estDirigePar -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.org/university#estDirigePar">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.example.org/university#Departement"/>
+        <rdfs:range rdf:resource="http://schema.org/Person"/>
+        <rdfs:range rdf:resource="http://www.example.org/university#Enseignant"/>
+        <rdfs:range rdf:resource="http://www.example.org/university#Personne"/>
+        <rdfs:range rdf:resource="http://www.example.org/university#PersonnelUniversitaire"/>
+        <rdfs:comment xml:lang="fr">Un département est dirigé par un enseignant</rdfs:comment>
+        <rdfs:label xml:lang="fr">est dirigé par</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.example.org/university#estEvalueePar -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.org/university#estEvalueePar">
+        <owl:equivalentProperty rdf:resource="http://www.example.org/university#estÉvaluéPar"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.example.org/university#estÉvaluéPar"/>
+        <rdfs:domain rdf:resource="http://schema.org/Course"/>
+        <rdfs:domain rdf:resource="http://www.example.org/university#Cours"/>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.example.org/university#dureeHeures"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://schema.org/Action"/>
+        <rdfs:range rdf:resource="http://www.example.org/university#Evaluation"/>
+        <rdfs:comment xml:lang="fr">Un cours est évalué par une évaluation</rdfs:comment>
+        <rdfs:label xml:lang="fr">est évalué par</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.example.org/university#estInscritA -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.org/university#estInscritA">
+        <rdfs:domain rdf:resource="http://www.example.org/university#Etudiant"/>
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.example.org/university#suit"/>
+                <owl:someValuesFrom rdf:resource="http://www.example.org/university#Cours"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.example.org/university#estInscritA"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.example.org/university#Departement"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.example.org/university#estDirigePar"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:range>
+        <rdfs:comment xml:lang="fr">Un étudiant est inscrit à un département</rdfs:comment>
+        <rdfs:label xml:lang="fr">est inscrit à</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.example.org/university#estRattacheA -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.org/university#estRattacheA">
+        <rdfs:domain rdf:resource="http://www.example.org/university#Enseignant"/>
+        <rdfs:domain rdf:resource="http://www.example.org/university#PersonnelUniversitaire"/>
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.example.org/university#Enseignant"/>
+                    <rdf:Description rdf:about="http://www.example.org/university#PersonnelAdministratif"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://schema.org/Organization"/>
+        <rdfs:range rdf:resource="http://www.example.org/university#Departement"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.example.org/university#estDirigePar"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:range>
+        <rdfs:comment xml:lang="fr">Un enseignant est rattaché à un département</rdfs:comment>
+        <rdfs:label xml:lang="fr">est rattaché à</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.example.org/university#estÉvaluéPar -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.org/university#estÉvaluéPar">
+        <rdfs:subPropertyOf rdf:resource="http://www.example.org/university#estEvalueePar"/>
+        <rdfs:domain rdf:resource="http://www.example.org/university#Cours"/>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.example.org/university#dureeHeures"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://schema.org/Action"/>
+        <rdfs:range rdf:resource="http://www.example.org/university#Evaluation"/>
+        <rdfs:comment xml:lang="fr">Un cours est évalué par une évaluation</rdfs:comment>
+        <rdfs:label xml:lang="fr">est évalué par</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.example.org/university#faitPartieDe -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.org/university#faitPartieDe">
+        <rdfs:subPropertyOf rdf:resource="http://www.example.org/university#appartientA"/>
+        <rdfs:domain rdf:resource="http://www.example.org/university#Cours"/>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.example.org/university#dureeHeures"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.example.org/university#Module"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="http://www.example.org/university#appartientA"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:range>
+        <rdfs:comment xml:lang="fr">Un cours fait partie d&apos;un module</rdfs:comment>
+        <rdfs:label xml:lang="fr">fait partie de</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.example.org/university#passe -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.org/university#passe">
+        <rdfs:domain rdf:resource="http://www.example.org/university#Etudiant"/>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.example.org/university#suit"/>
+                <owl:someValuesFrom rdf:resource="http://www.example.org/university#Cours"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.example.org/university#estInscritA"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://schema.org/Action"/>
+        <rdfs:range rdf:resource="http://www.example.org/university#Examen"/>
+        <rdfs:comment xml:lang="fr">Un étudiant passe un examen</rdfs:comment>
+        <rdfs:label xml:lang="fr">passe</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.example.org/university#prepare -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.org/university#prepare">
+        <rdfs:subPropertyOf rdf:resource="http://www.example.org/university#PrépareÉvaluation"/>
+        <rdfs:domain rdf:resource="http://www.example.org/university#Enseignant"/>
+        <rdfs:domain rdf:resource="http://www.example.org/university#PersonnelUniversitaire"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.example.org/university#Enseignant"/>
+                    <rdf:Description rdf:about="http://www.example.org/university#PersonnelAdministratif"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://schema.org/Action"/>
+        <rdfs:range rdf:resource="http://www.example.org/university#Evaluation"/>
+        <rdfs:comment xml:lang="fr">Un enseignant prépare une évaluation</rdfs:comment>
+        <rdfs:label xml:lang="fr">prépare</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.example.org/university#realise -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.org/university#realise">
+        <rdfs:domain rdf:resource="http://www.example.org/university#Etudiant"/>
+        <rdfs:domain rdf:resource="http://www.example.org/university#Personne"/>
+        <rdfs:range rdf:resource="http://schema.org/Action"/>
+        <rdfs:range rdf:resource="http://www.example.org/university#Evaluation"/>
+        <rdfs:range rdf:resource="http://www.example.org/university#Projet"/>
+        <rdfs:comment xml:lang="fr">Un étudiant réalise un projet</rdfs:comment>
+        <rdfs:label xml:lang="fr">réalise</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.example.org/university#recoit -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.org/university#recoit">
+        <owl:equivalentProperty rdf:resource="http://www.example.org/university#reçoitNote"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.example.org/university#reçoitNote"/>
+        <rdfs:domain rdf:resource="http://www.example.org/university#Etudiant"/>
+        <rdfs:domain rdf:resource="http://www.example.org/university#Personne"/>
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.example.org/university#suit"/>
+                <owl:someValuesFrom rdf:resource="http://www.example.org/university#Cours"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.example.org/university#estInscritA"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.example.org/university#Note"/>
+        <rdfs:comment xml:lang="fr">Un étudiant reçoit une note</rdfs:comment>
+        <rdfs:label xml:lang="fr">reçoit</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.example.org/university#reçoitNote -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.org/university#reçoitNote">
+        <rdfs:subPropertyOf rdf:resource="http://www.example.org/university#recoit"/>
+        <rdfs:domain rdf:resource="http://www.example.org/university#Etudiant"/>
+        <rdfs:domain rdf:resource="http://www.example.org/university#Personne"/>
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.example.org/university#suit"/>
+                <owl:someValuesFrom rdf:resource="http://www.example.org/university#Cours"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.example.org/university#estInscritA"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://schema.org/Rating"/>
+        <rdfs:range rdf:resource="http://www.example.org/university#Note"/>
+        <rdfs:comment xml:lang="fr">Un étudiant reçoit une note</rdfs:comment>
+        <rdfs:label xml:lang="fr">reçoit note</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.example.org/university#seDerouleDans -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.org/university#seDerouleDans">
+        <rdfs:domain rdf:resource="http://www.example.org/university#Cours"/>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.example.org/university#dureeHeures"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.example.org/university#Salle"/>
+        <rdfs:comment xml:lang="fr">Un cours se déroule dans une salle</rdfs:comment>
+        <rdfs:label xml:lang="fr">se déroule dans</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.example.org/university#seDeroulePendant -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.org/university#seDeroulePendant">
+        <rdfs:domain rdf:resource="http://www.example.org/university#Cours"/>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.example.org/university#dureeHeures"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.example.org/university#Semestre"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2006/time#Interval"/>
+        <rdfs:comment xml:lang="fr">Un cours se déroule pendant un semestre</rdfs:comment>
+        <rdfs:label xml:lang="fr">se déroule pendant</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.example.org/university#suit -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.org/university#suit">
+        <rdfs:domain rdf:resource="http://www.example.org/university#Etudiant"/>
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.example.org/university#suit"/>
+                <owl:someValuesFrom rdf:resource="http://www.example.org/university#Cours"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.example.org/university#estInscritA"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://schema.org/Course"/>
+        <rdfs:range rdf:resource="http://www.example.org/university#Cours"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.example.org/university#dureeHeures"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:range>
+        <rdfs:comment xml:lang="fr">Un étudiant suit un cours</rdfs:comment>
+        <rdfs:label xml:lang="fr">suit</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.example.org/university#annee -->
+
+    <owl:DatatypeProperty rdf:about="http://www.example.org/university#annee">
+        <rdfs:domain rdf:resource="http://www.example.org/university#Semestre"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2006/time#Interval"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="fr">L&apos;année d&apos;un semestre</rdfs:comment>
+        <rdfs:label xml:lang="fr">année</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.example.org/university#capacite -->
+
+    <owl:DatatypeProperty rdf:about="http://www.example.org/university#capacite">
+        <rdfs:domain rdf:resource="http://www.example.org/university#Salle"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment xml:lang="fr">La capacité d&apos;une salle</rdfs:comment>
+        <rdfs:label xml:lang="fr">capacité</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.example.org/university#coefficient -->
+
+    <owl:DatatypeProperty rdf:about="http://www.example.org/university#coefficient">
+        <rdfs:domain rdf:resource="http://schema.org/Action"/>
+        <rdfs:domain rdf:resource="http://www.example.org/university#Evaluation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment xml:lang="fr">Le coefficient d&apos;une évaluation</rdfs:comment>
+        <rdfs:label xml:lang="fr">coefficient</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.example.org/university#credits -->
+
+    <owl:DatatypeProperty rdf:about="http://www.example.org/university#credits">
+        <rdfs:domain rdf:resource="http://www.example.org/university#Module"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="http://www.example.org/university#appartientA"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment xml:lang="fr">Le nombre de crédits d&apos;un module</rdfs:comment>
+        <rdfs:label xml:lang="fr">crédits</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.example.org/university#date -->
+
+    <owl:DatatypeProperty rdf:about="http://www.example.org/university#date">
+        <rdfs:domain rdf:resource="http://schema.org/Action"/>
+        <rdfs:domain rdf:resource="http://www.example.org/university#Evaluation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+        <rdfs:comment xml:lang="fr">La date d&apos;une évaluation</rdfs:comment>
+        <rdfs:label xml:lang="fr">date</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.example.org/university#dateDebut -->
+
+    <owl:DatatypeProperty rdf:about="http://www.example.org/university#dateDebut">
+        <rdfs:domain rdf:resource="http://schema.org/Action"/>
+        <rdfs:domain rdf:resource="http://www.example.org/university#Projet"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+        <rdfs:comment xml:lang="fr">La date de début d&apos;un projet</rdfs:comment>
+        <rdfs:label xml:lang="fr">date de début</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.example.org/university#dateFin -->
+
+    <owl:DatatypeProperty rdf:about="http://www.example.org/university#dateFin">
+        <rdfs:domain rdf:resource="http://schema.org/Action"/>
+        <rdfs:domain rdf:resource="http://www.example.org/university#Projet"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+        <rdfs:comment xml:lang="fr">La date de fin d&apos;un projet</rdfs:comment>
+        <rdfs:label xml:lang="fr">date de fin</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.example.org/university#dateNaissance -->
+
+    <owl:DatatypeProperty rdf:about="http://www.example.org/university#dateNaissance">
+        <rdfs:domain rdf:resource="http://schema.org/Person"/>
+        <rdfs:domain rdf:resource="http://www.example.org/university#Personne"/>
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+        <rdfs:comment xml:lang="fr">La date de naissance d&apos;une personne</rdfs:comment>
+        <rdfs:label xml:lang="fr">date de naissance</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.example.org/university#descriptionCours -->
+
+    <owl:DatatypeProperty rdf:about="http://www.example.org/university#descriptionCours">
+        <rdfs:domain rdf:resource="http://schema.org/Course"/>
+        <rdfs:domain rdf:resource="http://www.example.org/university#Cours"/>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.example.org/university#dureeHeures"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="fr">La description d&apos;un cours</rdfs:comment>
+        <rdfs:label xml:lang="fr">description du cours</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.example.org/university#duree -->
+
+    <owl:DatatypeProperty rdf:about="http://www.example.org/university#duree">
+        <rdfs:domain rdf:resource="http://schema.org/Action"/>
+        <rdfs:domain rdf:resource="http://www.example.org/university#Evaluation"/>
+        <rdfs:domain rdf:resource="http://www.example.org/university#Examen"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="fr">La durée d&apos;un examen</rdfs:comment>
+        <rdfs:label xml:lang="fr">durée</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.example.org/university#dureeHeures -->
+
+    <owl:DatatypeProperty rdf:about="http://www.example.org/university#dureeHeures">
+        <rdfs:domain rdf:resource="http://www.example.org/university#Cours"/>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.example.org/university#dureeHeures"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment xml:lang="fr">La durée d&apos;un cours en heures</rdfs:comment>
+        <rdfs:label xml:lang="fr">durée en heures</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.example.org/university#email -->
+
+    <owl:DatatypeProperty rdf:about="http://www.example.org/university#email">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://schema.org/Person"/>
+        <rdfs:domain rdf:resource="http://www.example.org/university#Personne"/>
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="fr">L&apos;adresse email d&apos;une personne</rdfs:comment>
+        <rdfs:label xml:lang="fr">email</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.example.org/university#modalite -->
+
+    <owl:DatatypeProperty rdf:about="http://www.example.org/university#modalite">
+        <rdfs:domain rdf:resource="http://schema.org/Action"/>
+        <rdfs:domain rdf:resource="http://www.example.org/university#Examen"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="fr">La modalité d&apos;un examen</rdfs:comment>
+        <rdfs:label xml:lang="fr">modalité</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.example.org/university#niveau -->
+
+    <owl:DatatypeProperty rdf:about="http://www.example.org/university#niveau">
+        <rdfs:domain rdf:resource="http://schema.org/Person"/>
+        <rdfs:domain rdf:resource="http://www.example.org/university#Etudiant"/>
+        <rdfs:domain rdf:resource="http://www.example.org/university#Personne"/>
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.example.org/university#suit"/>
+                <owl:someValuesFrom rdf:resource="http://www.example.org/university#Cours"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.example.org/university#estInscritA"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="fr">Le niveau d&apos;études d&apos;un étudiant</rdfs:comment>
+        <rdfs:label xml:lang="fr">niveau</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.example.org/university#nom -->
+
+    <owl:DatatypeProperty rdf:about="http://www.example.org/university#nom">
+        <rdfs:domain rdf:resource="http://schema.org/Person"/>
+        <rdfs:domain rdf:resource="http://www.example.org/university#Personne"/>
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="fr">Le nom d&apos;une personne</rdfs:comment>
+        <rdfs:label xml:lang="fr">nom</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.example.org/university#nomDepartement -->
+
+    <owl:DatatypeProperty rdf:about="http://www.example.org/university#nomDepartement">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.example.org/university#Departement"/>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.example.org/university#estDirigePar"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="fr">Le nom d&apos;un département</rdfs:comment>
+        <rdfs:label xml:lang="fr">nom du département</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.example.org/university#nomModule -->
+
+    <owl:DatatypeProperty rdf:about="http://www.example.org/university#nomModule">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.example.org/university#Module"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="http://www.example.org/university#appartientA"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="fr">Le nom d&apos;un module</rdfs:comment>
+        <rdfs:label xml:lang="fr">nom du module</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.example.org/university#note -->
+
+    <owl:DatatypeProperty rdf:about="http://www.example.org/university#note">
+        <rdfs:domain rdf:resource="http://schema.org/Rating"/>
+        <rdfs:domain rdf:resource="http://www.example.org/university#Note"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment xml:lang="fr">La valeur d&apos;une note</rdfs:comment>
+        <rdfs:label xml:lang="fr">note</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.example.org/university#numeroEtudiant -->
+
+    <owl:DatatypeProperty rdf:about="http://www.example.org/university#numeroEtudiant">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.example.org/university#Etudiant"/>
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.example.org/university#suit"/>
+                <owl:someValuesFrom rdf:resource="http://www.example.org/university#Cours"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.example.org/university#estInscritA"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment xml:lang="fr">Le numéro d&apos;identification d&apos;un étudiant</rdfs:comment>
+        <rdfs:label xml:lang="fr">numéro étudiant</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.example.org/university#numeroSalle -->
+
+    <owl:DatatypeProperty rdf:about="http://www.example.org/university#numeroSalle">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.example.org/university#Salle"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="fr">Le numéro d&apos;une salle</rdfs:comment>
+        <rdfs:label xml:lang="fr">numéro de salle</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.example.org/university#numeroSemestre -->
+
+    <owl:DatatypeProperty rdf:about="http://www.example.org/university#numeroSemestre">
+        <rdfs:domain rdf:resource="http://www.example.org/university#Semestre"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2006/time#Interval"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment xml:lang="fr">Le numéro d&apos;un semestre</rdfs:comment>
+        <rdfs:label xml:lang="fr">numéro du semestre</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.example.org/university#prenom -->
+
+    <owl:DatatypeProperty rdf:about="http://www.example.org/university#prenom">
+        <rdfs:domain rdf:resource="http://www.example.org/university#Personne"/>
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="fr">Le prénom d&apos;une personne</rdfs:comment>
+        <rdfs:label xml:lang="fr">prénom</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.example.org/university#specialite -->
+
+    <owl:DatatypeProperty rdf:about="http://www.example.org/university#specialite">
+        <rdfs:domain rdf:resource="http://www.example.org/university#Enseignant"/>
+        <rdfs:domain rdf:resource="http://www.example.org/university#Personne"/>
+        <rdfs:domain rdf:resource="http://www.example.org/university#PersonnelUniversitaire"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="fr">La spécialité d&apos;un enseignant</rdfs:comment>
+        <rdfs:label xml:lang="fr">spécialité</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.example.org/university#supérieureÀ -->
+
+    <owl:DatatypeProperty rdf:about="http://www.example.org/university#supérieureÀ">
+        <rdfs:domain rdf:resource="http://schema.org/Rating"/>
+        <rdfs:domain rdf:resource="http://www.example.org/university#Note"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment xml:lang="fr">Indique si une note est supérieure à une valeur donnée</rdfs:comment>
+        <rdfs:label xml:lang="fr">supérieure à</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.example.org/university#titreCours -->
+
+    <owl:DatatypeProperty rdf:about="http://www.example.org/university#titreCours">
+        <rdfs:domain rdf:resource="http://www.example.org/university#Cours"/>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.example.org/university#dureeHeures"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="fr">Le titre d&apos;un cours</rdfs:comment>
+        <rdfs:label xml:lang="fr">titre du cours</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.example.org/university#type -->
+
+    <owl:DatatypeProperty rdf:about="http://www.example.org/university#type">
+        <rdfs:domain rdf:resource="http://www.example.org/university#Evaluation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="fr">Le type d&apos;une évaluation</rdfs:comment>
+        <rdfs:label xml:lang="fr">type</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://linkedscience.org/teach/ns#Course -->
+
+    <owl:Class rdf:about="http://linkedscience.org/teach/ns#Course"/>
+    
+
+
+    <!-- http://linkedscience.org/teach/ns#Student -->
+
+    <owl:Class rdf:about="http://linkedscience.org/teach/ns#Student"/>
+    
+
+
+    <!-- http://linkedscience.org/teach/ns#Teacher -->
+
+    <owl:Class rdf:about="http://linkedscience.org/teach/ns#Teacher"/>
+    
+
+
+    <!-- http://purl.org/vocab/aiiso/schema#Department -->
+
+    <owl:Class rdf:about="http://purl.org/vocab/aiiso/schema#Department"/>
+    
+
+
+    <!-- http://purl.org/vocab/aiiso/schema#Module -->
+
+    <owl:Class rdf:about="http://purl.org/vocab/aiiso/schema#Module"/>
+    
+
+
+    <!-- http://schema.org/Action -->
+
+    <owl:Class rdf:about="http://schema.org/Action"/>
+    
+
+
+    <!-- http://schema.org/Building -->
+
+    <owl:Class rdf:about="http://schema.org/Building"/>
+    
+
+
+    <!-- http://schema.org/Course -->
+
+    <owl:Class rdf:about="http://schema.org/Course"/>
+    
+
+
+    <!-- http://schema.org/DefinedTerm -->
+
+    <owl:Class rdf:about="http://schema.org/DefinedTerm"/>
+    
+
+
+    <!-- http://schema.org/Organization -->
+
+    <owl:Class rdf:about="http://schema.org/Organization"/>
+    
+
+
+    <!-- http://schema.org/Person -->
+
+    <owl:Class rdf:about="http://schema.org/Person"/>
+    
+
+
+    <!-- http://schema.org/PostalAddress -->
+
+    <owl:Class rdf:about="http://schema.org/PostalAddress"/>
+    
+
+
+    <!-- http://schema.org/Rating -->
+
+    <owl:Class rdf:about="http://schema.org/Rating"/>
+    
+
+
+    <!-- http://schema.org/Room -->
+
+    <owl:Class rdf:about="http://schema.org/Room"/>
+    
+
+
+    <!-- http://www.example.org/university#Cours -->
+
+    <owl:Class rdf:about="http://www.example.org/university#Cours">
+        <rdfs:subClassOf rdf:resource="http://schema.org/Course"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.example.org/university#dureeHeures"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="fr">Un cours enseigné à l&apos;université</rdfs:comment>
+        <rdfs:label xml:lang="fr">Cours</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/university#Departement -->
+
+    <owl:Class rdf:about="http://www.example.org/university#Departement">
+        <rdfs:subClassOf rdf:resource="http://schema.org/Organization"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.example.org/university#estDirigePar"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="fr">Un département universitaire</rdfs:comment>
+        <rdfs:label xml:lang="fr">Département</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/university#Doctorant -->
+
+    <owl:Class rdf:about="http://www.example.org/university#Doctorant">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.example.org/university#Enseignant"/>
+                    <rdf:Description rdf:about="http://www.example.org/university#Etudiant"/>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://schema.org/Person"/>
+        <rdfs:subClassOf rdf:resource="http://www.example.org/university#Etudiant"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.example.org/university#Enseignant"/>
+                    <rdf:Description rdf:about="http://www.example.org/university#Etudiant"/>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.example.org/university#Enseignant"/>
+                    <rdf:Description rdf:about="http://www.example.org/university#PersonnelAdministratif"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.example.org/university#suit"/>
+                <owl:someValuesFrom rdf:resource="http://www.example.org/university#Cours"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.example.org/university#estInscritA"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="fr">Un doctorant est à la fois étudiant et enseignant</rdfs:comment>
+        <rdfs:label xml:lang="fr">Doctorant</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/university#Enseignant -->
+
+    <owl:Class rdf:about="http://www.example.org/university#Enseignant">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/university#Personne"/>
+        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.example.org/university#Enseignant"/>
+                    <rdf:Description rdf:about="http://www.example.org/university#PersonnelAdministratif"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="fr">Un enseignant à l&apos;université</rdfs:comment>
+        <rdfs:label xml:lang="fr">Enseignant</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/university#Etudiant -->
+
+    <owl:Class rdf:about="http://www.example.org/university#Etudiant">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/university#Personne"/>
+        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.example.org/university#suit"/>
+                <owl:someValuesFrom rdf:resource="http://www.example.org/university#Cours"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.example.org/university#estInscritA"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://www.example.org/university#PersonnelUniversitaire"/>
+        <rdfs:comment xml:lang="fr">Un étudiant inscrit à l&apos;université</rdfs:comment>
+        <rdfs:label xml:lang="fr">Étudiant</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/university#Evaluation -->
+
+    <owl:Class rdf:about="http://www.example.org/university#Evaluation">
+        <rdfs:subClassOf rdf:resource="http://schema.org/Action"/>
+        <rdfs:comment xml:lang="fr">Une évaluation pour un cours</rdfs:comment>
+        <rdfs:label xml:lang="fr">Évaluation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/university#Examen -->
+
+    <owl:Class rdf:about="http://www.example.org/university#Examen">
+        <rdfs:subClassOf rdf:resource="http://schema.org/Action"/>
+        <rdfs:subClassOf rdf:resource="http://www.example.org/university#Evaluation"/>
+        <rdfs:comment xml:lang="fr">Un examen pour évaluer un cours</rdfs:comment>
+        <rdfs:label xml:lang="fr">Examen</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/university#Module -->
+
+    <owl:Class rdf:about="http://www.example.org/university#Module">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="http://www.example.org/university#appartientA"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="fr">Un module regroupant plusieurs cours</rdfs:comment>
+        <rdfs:label xml:lang="fr">Module</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/university#Note -->
+
+    <owl:Class rdf:about="http://www.example.org/university#Note">
+        <rdfs:subClassOf rdf:resource="http://schema.org/Rating"/>
+        <rdfs:comment xml:lang="fr">Une note attribuée à un étudiant</rdfs:comment>
+        <rdfs:label xml:lang="fr">Note</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/university#Personne -->
+
+    <owl:Class rdf:about="http://www.example.org/university#Personne">
+        <owl:equivalentClass rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <rdfs:subClassOf rdf:resource="http://schema.org/Person"/>
+        <rdfs:comment xml:lang="fr">Une personne dans le système universitaire</rdfs:comment>
+        <rdfs:label xml:lang="fr">Personne</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/university#PersonnelAdministratif -->
+
+    <owl:Class rdf:about="http://www.example.org/university#PersonnelAdministratif">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/university#Personne"/>
+        <rdfs:comment xml:lang="fr">Personnel administratif de l&apos;université</rdfs:comment>
+        <rdfs:label xml:lang="fr">Personnel Administratif</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/university#PersonnelUniversitaire -->
+
+    <owl:Class rdf:about="http://www.example.org/university#PersonnelUniversitaire">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.example.org/university#Enseignant"/>
+                    <rdf:Description rdf:about="http://www.example.org/university#PersonnelAdministratif"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment xml:lang="fr">Le personnel universitaire comprend les enseignants et le personnel administratif</rdfs:comment>
+        <rdfs:label xml:lang="fr">Personnel Universitaire</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/university#Projet -->
+
+    <owl:Class rdf:about="http://www.example.org/university#Projet">
+        <rdfs:subClassOf rdf:resource="http://schema.org/Action"/>
+        <rdfs:subClassOf rdf:resource="http://www.example.org/university#Evaluation"/>
+        <rdfs:comment xml:lang="fr">Un projet pour évaluer un cours</rdfs:comment>
+        <rdfs:label xml:lang="fr">Projet</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/university#Salle -->
+
+    <owl:Class rdf:about="http://www.example.org/university#Salle">
+        <rdfs:subClassOf rdf:resource="http://schema.org/Room"/>
+        <rdfs:comment xml:lang="fr">Une salle de cours</rdfs:comment>
+        <rdfs:label xml:lang="fr">Salle</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/university#Semestre -->
+
+    <owl:Class rdf:about="http://www.example.org/university#Semestre">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2006/time#Interval"/>
+        <rdfs:comment xml:lang="fr">Un semestre universitaire</rdfs:comment>
+        <rdfs:label xml:lang="fr">Semestre</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#Concept -->
+
+    <owl:Class rdf:about="http://www.w3.org/2004/02/skos/core#Concept"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#ConceptScheme -->
+
+    <owl:Class rdf:about="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+    
+
+
+    <!-- http://www.w3.org/2006/time#Instant -->
+
+    <owl:Class rdf:about="http://www.w3.org/2006/time#Instant"/>
+    
+
+
+    <!-- http://www.w3.org/2006/time#Interval -->
+
+    <owl:Class rdf:about="http://www.w3.org/2006/time#Interval"/>
+    
+
+
+    <!-- http://www.w3.org/2006/vcard/ns#Address -->
+
+    <owl:Class rdf:about="http://www.w3.org/2006/vcard/ns#Address"/>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/Organization -->
+
+    <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Organization"/>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/Person -->
+
+    <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Person"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.example.org/university#Algebre -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/university#Algebre">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="http://www.example.org/university#Mathematiques"/>
+        <skos:definition xml:lang="fr">L&apos;algèbre est la branche des mathématiques qui étudie les structures algébriques.</skos:definition>
+        <skos:inScheme rdf:resource="http://www.example.org/university#Specialites"/>
+        <skos:prefLabel xml:lang="fr">Algèbre</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/university#IA -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/university#IA">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:altLabel xml:lang="fr">IA</skos:altLabel>
+        <skos:broader rdf:resource="http://www.example.org/university#Informatique"/>
+        <skos:definition xml:lang="fr">L&apos;intelligence artificielle est l&apos;ensemble des théories et des techniques mises en œuvre en vue de réaliser des machines capables de simuler l&apos;intelligence humaine.</skos:definition>
+        <skos:inScheme rdf:resource="http://www.example.org/university#Specialites"/>
+        <skos:prefLabel xml:lang="fr">Intelligence Artificielle</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/university#Informatique -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/university#Informatique">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:definition xml:lang="fr">L&apos;informatique est la science du traitement automatique de l&apos;information.</skos:definition>
+        <skos:inScheme rdf:resource="http://www.example.org/university#Specialites"/>
+        <skos:prefLabel xml:lang="fr">Informatique</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/university#Licence1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/university#Licence1">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:altLabel xml:lang="fr">L1</skos:altLabel>
+        <skos:inScheme rdf:resource="http://www.example.org/university#NiveauxEtudes"/>
+        <skos:notation>L1</skos:notation>
+        <skos:prefLabel xml:lang="fr">Licence 1</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/university#Licence2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/university#Licence2">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:altLabel xml:lang="fr">L2</skos:altLabel>
+        <skos:inScheme rdf:resource="http://www.example.org/university#NiveauxEtudes"/>
+        <skos:notation>L2</skos:notation>
+        <skos:prefLabel xml:lang="fr">Licence 2</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/university#Licence3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/university#Licence3">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:altLabel xml:lang="fr">L3</skos:altLabel>
+        <skos:inScheme rdf:resource="http://www.example.org/university#NiveauxEtudes"/>
+        <skos:notation>L3</skos:notation>
+        <skos:prefLabel xml:lang="fr">Licence 3</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/university#Master1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/university#Master1">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:altLabel xml:lang="fr">M1</skos:altLabel>
+        <skos:inScheme rdf:resource="http://www.example.org/university#NiveauxEtudes"/>
+        <skos:notation>M1</skos:notation>
+        <skos:prefLabel xml:lang="fr">Master 1</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/university#Master2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/university#Master2">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:altLabel xml:lang="fr">M2</skos:altLabel>
+        <skos:inScheme rdf:resource="http://www.example.org/university#NiveauxEtudes"/>
+        <skos:notation>M2</skos:notation>
+        <skos:prefLabel xml:lang="fr">Master 2</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/university#Mathematiques -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/university#Mathematiques">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:definition xml:lang="fr">Les mathématiques sont une discipline académique qui étudie des concepts tels que les nombres, les structures, les variations et l&apos;espace.</skos:definition>
+        <skos:inScheme rdf:resource="http://www.example.org/university#Specialites"/>
+        <skos:prefLabel xml:lang="fr">Mathématiques</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/university#NiveauxEtudes -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/university#NiveauxEtudes">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+        <dc:description xml:lang="fr">Classification des niveaux d&apos;études universitaires</dc:description>
+        <dc:title xml:lang="fr">Niveaux d&apos;études</dc:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/university#Specialites -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/university#Specialites">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+        <dc:description xml:lang="fr">Classification des spécialités académiques</dc:description>
+        <dc:title xml:lang="fr">Spécialités académiques</dc:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/university#coursDeepLearning -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/university#coursDeepLearning">
+        <rdf:type rdf:resource="http://linkedscience.org/teach/ns#Course"/>
+        <rdf:type rdf:resource="http://schema.org/Course"/>
+        <rdf:type rdf:resource="http://www.example.org/university#Cours"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.example.org/university#dureeHeures"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdf:type>
+        <appartientA rdf:resource="http://www.example.org/university#moduleIA"/>
+        <estEvalueePar rdf:resource="http://www.example.org/university#projetDL"/>
+        <estÉvaluéPar rdf:resource="http://www.example.org/university#projetDL"/>
+        <faitPartieDe rdf:resource="http://www.example.org/university#moduleIA"/>
+        <seDerouleDans rdf:resource="http://www.example.org/university#salleB201"/>
+        <seDeroulePendant rdf:resource="http://www.example.org/university#semestre1_2023"/>
+        <descriptionCours>Réseaux de neurones profonds et applications</descriptionCours>
+        <titreCours>Deep Learning</titreCours>
+        <dc:description xml:lang="fr">Réseaux de neurones profonds et applications</dc:description>
+        <dc:language>fr</dc:language>
+        <dc:publisher xml:lang="fr">Département d&apos;Informatique, Université Exemple</dc:publisher>
+        <dc:rights xml:lang="fr">Tous droits réservés, Université Exemple, 2023</dc:rights>
+        <dc:subject xml:lang="fr">Apprentissage profond</dc:subject>
+        <dc:subject xml:lang="fr">Intelligence Artificielle</dc:subject>
+        <dc:title xml:lang="fr">Deep Learning</dc:title>
+        <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2023-01-20</dcterms:created>
+        <dcterms:creator rdf:resource="http://www.example.org/university#enseignant1"/>
+        <dcterms:isPartOf rdf:resource="http://www.example.org/university#moduleIA"/>
+        <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2023-05-12</dcterms:modified>
+        <dcterms:temporal rdf:resource="http://www.example.org/university#semestre1_2023"/>
+        <schema:assessment rdf:resource="http://www.example.org/university#projetDL"/>
+        <schema:courseCode>INFO-DL-201</schema:courseCode>
+        <schema:location rdf:resource="http://www.example.org/university#salleB201"/>
+        <schema:numberOfCredits rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</schema:numberOfCredits>
+        <schema:provider rdf:resource="http://www.example.org/university#departementInfo"/>
+        <schema:teaches>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://schema.org/DefinedTerm"/>
+                <schema:name xml:lang="fr">Réseaux convolutifs</schema:name>
+            </rdf:Description>
+        </schema:teaches>
+        <schema:teaches>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://schema.org/DefinedTerm"/>
+                <schema:name xml:lang="fr">Réseaux récurrents</schema:name>
+            </rdf:Description>
+        </schema:teaches>
+        <schema:teaches>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://schema.org/DefinedTerm"/>
+                <schema:name xml:lang="fr">Transformers</schema:name>
+            </rdf:Description>
+        </schema:teaches>
+        <schema:temporalCoverage>Premier semestre 2023-2024</schema:temporalCoverage>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/university#coursML -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/university#coursML">
+        <rdf:type rdf:resource="http://linkedscience.org/teach/ns#Course"/>
+        <rdf:type rdf:resource="http://schema.org/Course"/>
+        <rdf:type rdf:resource="http://www.example.org/university#Cours"/>
+        <appartientA rdf:resource="http://www.example.org/university#moduleIA"/>
+        <estEvalueePar rdf:resource="http://www.example.org/university#examenML"/>
+        <estÉvaluéPar rdf:resource="http://www.example.org/university#examenML"/>
+        <seDerouleDans rdf:resource="http://www.example.org/university#salleA101"/>
+        <seDeroulePendant rdf:resource="http://www.example.org/university#semestre1_2023"/>
+        <descriptionCours>Introduction aux techniques d&apos;apprentissage automatique</descriptionCours>
+        <titreCours>Machine Learning</titreCours>
+        <dc:description xml:lang="fr">Introduction aux techniques d&apos;apprentissage automatique</dc:description>
+        <dc:language>fr</dc:language>
+        <dc:publisher xml:lang="fr">Département d&apos;Informatique, Université Exemple</dc:publisher>
+        <dc:rights xml:lang="fr">Tous droits réservés, Université Exemple, 2023</dc:rights>
+        <dc:subject xml:lang="fr">Apprentissage automatique</dc:subject>
+        <dc:subject xml:lang="fr">Intelligence Artificielle</dc:subject>
+        <dc:title xml:lang="fr">Machine Learning</dc:title>
+        <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2023-01-15</dcterms:created>
+        <dcterms:creator rdf:resource="http://www.example.org/university#enseignant1"/>
+        <dcterms:isPartOf rdf:resource="http://www.example.org/university#moduleIA"/>
+        <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2023-05-10</dcterms:modified>
+        <dcterms:temporal rdf:resource="http://www.example.org/university#semestre1_2023"/>
+        <schema:assessment rdf:resource="http://www.example.org/university#examenML"/>
+        <schema:courseCode>INFO-ML-101</schema:courseCode>
+        <schema:location rdf:resource="http://www.example.org/university#salleA101"/>
+        <schema:numberOfCredits rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</schema:numberOfCredits>
+        <schema:provider rdf:resource="http://www.example.org/university#departementInfo"/>
+        <schema:teaches>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://schema.org/DefinedTerm"/>
+                <schema:name xml:lang="fr">Apprentissage supervisé</schema:name>
+            </rdf:Description>
+        </schema:teaches>
+        <schema:teaches>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://schema.org/DefinedTerm"/>
+                <schema:name xml:lang="fr">Réseaux de neurones</schema:name>
+            </rdf:Description>
+        </schema:teaches>
+        <schema:teaches>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://schema.org/DefinedTerm"/>
+                <schema:name xml:lang="fr">Algorithmes de classification</schema:name>
+            </rdf:Description>
+        </schema:teaches>
+        <schema:temporalCoverage>Premier semestre 2023-2024</schema:temporalCoverage>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/university#departementInfo -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/university#departementInfo">
+        <rdf:type rdf:resource="http://purl.org/vocab/aiiso/schema#Department"/>
+        <rdf:type rdf:resource="http://www.example.org/university#Departement"/>
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.example.org/university#estDirigePar"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdf:type>
+        <estDirigePar rdf:resource="http://www.example.org/university#enseignant1"/>
+        <nomDepartement>Informatique</nomDepartement>
+        <dc:description xml:lang="fr">Département spécialisé dans l&apos;enseignement de l&apos;informatique</dc:description>
+        <dc:title xml:lang="fr">Département d&apos;Informatique</dc:title>
+        <schema:address>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2006/vcard/ns#Address"/>
+                <vcard:country-name>France</vcard:country-name>
+                <vcard:locality>Ville Universitaire</vcard:locality>
+                <vcard:postal-code>75000</vcard:postal-code>
+                <vcard:street-address>123 Rue de l&apos;Université</vcard:street-address>
+            </rdf:Description>
+        </schema:address>
+        <schema:alumni rdf:resource="http://www.example.org/university#etudiant1"/>
+        <schema:email>info@univ.fr</schema:email>
+        <schema:employee rdf:resource="http://www.example.org/university#enseignant1"/>
+        <schema:funder>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://schema.org/Organization"/>
+                <schema:name xml:lang="fr">Ministère de l&apos;Enseignement Supérieur</schema:name>
+            </rdf:Description>
+        </schema:funder>
+        <schema:telephone>+33123456789</schema:telephone>
+        <schema:url rdf:resource="http://www.univ.fr/departements/info"/>
+        <foaf:name>Département d&apos;Informatique</foaf:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/university#departementMaths -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/university#departementMaths">
+        <rdf:type rdf:resource="http://purl.org/vocab/aiiso/schema#Department"/>
+        <rdf:type rdf:resource="http://www.example.org/university#Departement"/>
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+        <nomDepartement>Mathématiques</nomDepartement>
+        <dc:description xml:lang="fr">Département spécialisé dans l&apos;enseignement des mathématiques</dc:description>
+        <dc:title xml:lang="fr">Département de Mathématiques</dc:title>
+        <schema:address>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2006/vcard/ns#Address"/>
+                <vcard:country-name>France</vcard:country-name>
+                <vcard:locality>Ville Universitaire</vcard:locality>
+                <vcard:postal-code>75000</vcard:postal-code>
+                <vcard:street-address>124 Rue de l&apos;Université</vcard:street-address>
+            </rdf:Description>
+        </schema:address>
+        <schema:alumni rdf:resource="http://www.example.org/university#etudiant2"/>
+        <schema:email>maths@univ.fr</schema:email>
+        <schema:employee rdf:resource="http://www.example.org/university#enseignant2"/>
+        <schema:funder>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://schema.org/Organization"/>
+                <schema:name xml:lang="fr">Ministère de l&apos;Enseignement Supérieur</schema:name>
+            </rdf:Description>
+        </schema:funder>
+        <schema:telephone>+33123456790</schema:telephone>
+        <schema:url rdf:resource="http://www.univ.fr/departements/maths"/>
+        <foaf:name>Département de Mathématiques</foaf:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/university#enseignant1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/university#enseignant1">
+        <rdf:type rdf:resource="http://linkedscience.org/teach/ns#Teacher"/>
+        <rdf:type rdf:resource="http://schema.org/Person"/>
+        <rdf:type rdf:resource="http://www.example.org/university#Enseignant"/>
+        <rdf:type rdf:resource="http://www.example.org/university#PersonnelUniversitaire"/>
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <rdf:type>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.example.org/university#Enseignant"/>
+                    <rdf:Description rdf:about="http://www.example.org/university#PersonnelAdministratif"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdf:type>
+        <dirige rdf:resource="http://www.example.org/university#departementInfo"/>
+        <enseigne rdf:resource="http://www.example.org/university#coursDeepLearning"/>
+        <enseigne rdf:resource="http://www.example.org/university#coursML"/>
+        <estRattacheA rdf:resource="http://www.example.org/university#departementInfo"/>
+        <prepare rdf:resource="http://www.example.org/university#examenML"/>
+        <prepare rdf:resource="http://www.example.org/university#projetDL"/>
+        <dateNaissance rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1975-05-15</dateNaissance>
+        <email>jean.dupont@univ.fr</email>
+        <nom>Dupont</nom>
+        <prenom>Jean</prenom>
+        <specialite>Intelligence Artificielle</specialite>
+        <teach:teaches rdf:resource="http://www.example.org/university#coursDeepLearning"/>
+        <teach:teaches rdf:resource="http://www.example.org/university#coursML"/>
+        <dcterms:creator rdf:resource="http://www.example.org/university#examenML"/>
+        <dcterms:creator rdf:resource="http://www.example.org/university#projetDL"/>
+        <schema:email>jean.dupont@univ.fr</schema:email>
+        <schema:jobTitle>Professeur des Universités</schema:jobTitle>
+        <schema:memberOf rdf:resource="http://www.example.org/university#departementInfo"/>
+        <schema:name>Jean Dupont</schema:name>
+        <schema:specialty>Intelligence Artificielle</schema:specialty>
+        <schema:teaches rdf:resource="http://www.example.org/university#coursDeepLearning"/>
+        <schema:teaches rdf:resource="http://www.example.org/university#coursML"/>
+        <schema:telephone>+33123456791</schema:telephone>
+        <schema:worksFor rdf:resource="http://www.example.org/university#departementInfo"/>
+        <vcard:hasAddress>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2006/vcard/ns#Address"/>
+                <vcard:country-name>France</vcard:country-name>
+                <vcard:locality>Ville Universitaire</vcard:locality>
+                <vcard:postal-code>75000</vcard:postal-code>
+                <vcard:street-address>Bureau A101, Bâtiment A</vcard:street-address>
+            </rdf:Description>
+        </vcard:hasAddress>
+        <foaf:birthday>1975-05-15</foaf:birthday>
+        <foaf:familyName>Dupont</foaf:familyName>
+        <foaf:givenName>Jean</foaf:givenName>
+        <foaf:homepage rdf:resource="http://www.univ.fr/~jdupont"/>
+        <foaf:img rdf:resource="http://www.univ.fr/staff/jdupont.jpg"/>
+        <foaf:interest rdf:resource="http://dbpedia.org/resource/Artificial_intelligence"/>
+        <foaf:interest rdf:resource="http://dbpedia.org/resource/Machine_learning"/>
+        <foaf:knows rdf:resource="http://www.example.org/university#enseignant2"/>
+        <foaf:mbox rdf:resource="mailto:jean.dupont@univ.fr"/>
+        <foaf:name>Jean Dupont</foaf:name>
+        <foaf:title>Professeur</foaf:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/university#enseignant2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/university#enseignant2">
+        <rdf:type rdf:resource="http://linkedscience.org/teach/ns#Teacher"/>
+        <rdf:type rdf:resource="http://schema.org/Person"/>
+        <rdf:type rdf:resource="http://www.example.org/university#Enseignant"/>
+        <rdf:type rdf:resource="http://www.example.org/university#PersonnelUniversitaire"/>
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <rdf:type>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.example.org/university#Enseignant"/>
+                    <rdf:Description rdf:about="http://www.example.org/university#PersonnelAdministratif"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdf:type>
+        <enseigne rdf:resource="http://www.example.org/university#Algebre"/>
+        <estRattacheA rdf:resource="http://www.example.org/university#departementMaths"/>
+        <dateNaissance rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1980-10-20</dateNaissance>
+        <email>sophie.martin@univ.fr</email>
+        <nom>Martin</nom>
+        <prenom>Sophie</prenom>
+        <specialite>Algèbre</specialite>
+        <schema:email>sophie.martin@univ.fr</schema:email>
+        <schema:jobTitle>Maître de Conférences</schema:jobTitle>
+        <schema:memberOf rdf:resource="http://www.example.org/university#departementMaths"/>
+        <schema:name>Sophie Martin</schema:name>
+        <schema:specialty>Algèbre</schema:specialty>
+        <schema:telephone>+33123456792</schema:telephone>
+        <vcard:hasAddress>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2006/vcard/ns#Address"/>
+                <vcard:country-name>France</vcard:country-name>
+                <vcard:locality>Ville Universitaire</vcard:locality>
+                <vcard:postal-code>75000</vcard:postal-code>
+                <vcard:street-address>Bureau B202, Bâtiment B</vcard:street-address>
+            </rdf:Description>
+        </vcard:hasAddress>
+        <foaf:birthday>1980-10-20</foaf:birthday>
+        <foaf:familyName>Martin</foaf:familyName>
+        <foaf:givenName>Sophie</foaf:givenName>
+        <foaf:homepage rdf:resource="http://www.univ.fr/~smartin"/>
+        <foaf:img rdf:resource="http://www.univ.fr/staff/smartin.jpg"/>
+        <foaf:interest rdf:resource="http://dbpedia.org/resource/Algebra"/>
+        <foaf:interest rdf:resource="http://dbpedia.org/resource/Mathematics"/>
+        <foaf:knows rdf:resource="http://www.example.org/university#enseignant1"/>
+        <foaf:mbox rdf:resource="mailto:sophie.martin@univ.fr"/>
+        <foaf:name>Sophie Martin</foaf:name>
+        <foaf:title>Maître de Conférences</foaf:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/university#etudiant1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/university#etudiant1">
+        <rdf:type rdf:resource="http://linkedscience.org/teach/ns#Student"/>
+        <rdf:type rdf:resource="http://www.example.org/university#Etudiant"/>
+        <rdf:type rdf:resource="http://www.example.org/university#Personne"/>
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.example.org/university#suit"/>
+                <owl:someValuesFrom rdf:resource="http://www.example.org/university#Cours"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.example.org/university#estInscritA"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdf:type>
+        <estInscritA rdf:resource="http://www.example.org/university#departementInfo"/>
+        <passe rdf:resource="http://www.example.org/university#examenML"/>
+        <realise rdf:resource="http://www.example.org/university#projetDL"/>
+        <recoit rdf:resource="http://www.example.org/university#noteExamenML_Etudiant1"/>
+        <recoit rdf:resource="http://www.example.org/university#noteProjetDL_Etudiant1"/>
+        <reçoitNote rdf:resource="http://www.example.org/university#noteExamenML_Etudiant1"/>
+        <suit rdf:resource="http://www.example.org/university#coursDeepLearning"/>
+        <suit rdf:resource="http://www.example.org/university#coursML"/>
+        <dateNaissance rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-03-12</dateNaissance>
+        <email>marie.lefebvre@etudiant.univ.fr</email>
+        <niveau>L3</niveau>
+        <nom>Lefebvre</nom>
+        <numeroEtudiant rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20201234</numeroEtudiant>
+        <prenom>Marie</prenom>
+        <teach:attends rdf:resource="http://www.example.org/university#coursDeepLearning"/>
+        <teach:attends rdf:resource="http://www.example.org/university#coursML"/>
+        <dcterms:creator rdf:resource="http://www.example.org/university#projetDL"/>
+        <dcterms:identifier>20201234</dcterms:identifier>
+        <schema:attends rdf:resource="http://www.example.org/university#coursDeepLearning"/>
+        <schema:attends rdf:resource="http://www.example.org/university#coursML"/>
+        <schema:educationalLevel>Licence 3</schema:educationalLevel>
+        <schema:email>marie.lefebvre@etudiant.univ.fr</schema:email>
+        <schema:memberOf rdf:resource="http://www.example.org/university#departementInfo"/>
+        <schema:name>Marie Lefebvre</schema:name>
+        <schema:participant rdf:resource="http://www.example.org/university#examenML"/>
+        <schema:recipient rdf:resource="http://www.example.org/university#noteExamenML_Etudiant1"/>
+        <schema:recipient rdf:resource="http://www.example.org/university#noteProjetDL_Etudiant1"/>
+        <schema:telephone>+33612345678</schema:telephone>
+        <skos:related rdf:resource="http://www.example.org/university#Licence3"/>
+        <vcard:hasAddress>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2006/vcard/ns#Address"/>
+                <vcard:country-name>France</vcard:country-name>
+                <vcard:locality>Ville Universitaire</vcard:locality>
+                <vcard:postal-code>75000</vcard:postal-code>
+                <vcard:street-address>Résidence Universitaire, Chambre 123</vcard:street-address>
+            </rdf:Description>
+        </vcard:hasAddress>
+        <foaf:birthday>2000-03-12</foaf:birthday>
+        <foaf:familyName>Lefebvre</foaf:familyName>
+        <foaf:givenName>Marie</foaf:givenName>
+        <foaf:img rdf:resource="http://www.univ.fr/students/mlefebvre.jpg"/>
+        <foaf:interest rdf:resource="http://dbpedia.org/resource/Artificial_intelligence"/>
+        <foaf:interest rdf:resource="http://dbpedia.org/resource/Computer_science"/>
+        <foaf:knows rdf:resource="http://www.example.org/university#etudiant2"/>
+        <foaf:mbox rdf:resource="mailto:marie.lefebvre@etudiant.univ.fr"/>
+        <foaf:name>Marie Lefebvre</foaf:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/university#etudiant2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/university#etudiant2">
+        <rdf:type rdf:resource="http://linkedscience.org/teach/ns#Student"/>
+        <rdf:type rdf:resource="http://www.example.org/university#Etudiant"/>
+        <rdf:type rdf:resource="http://www.example.org/university#Personne"/>
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.example.org/university#suit"/>
+                <owl:someValuesFrom rdf:resource="http://www.example.org/university#Cours"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.example.org/university#estInscritA"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdf:type>
+        <estInscritA rdf:resource="http://www.example.org/university#departementMaths"/>
+        <passe rdf:resource="http://www.example.org/university#examenML"/>
+        <recoit rdf:resource="http://www.example.org/university#noteExamenML_Etudiant2"/>
+        <suit rdf:resource="http://www.example.org/university#coursML"/>
+        <dateNaissance rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-07-25</dateNaissance>
+        <email>thomas.bernard@etudiant.univ.fr</email>
+        <niveau>M1</niveau>
+        <nom>Bernard</nom>
+        <numeroEtudiant rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20195678</numeroEtudiant>
+        <prenom>Thomas</prenom>
+        <teach:attends rdf:resource="http://www.example.org/university#coursML"/>
+        <dcterms:identifier>20195678</dcterms:identifier>
+        <schema:attends rdf:resource="http://www.example.org/university#coursML"/>
+        <schema:educationalLevel>Master 1</schema:educationalLevel>
+        <schema:email>thomas.bernard@etudiant.univ.fr</schema:email>
+        <schema:memberOf rdf:resource="http://www.example.org/university#departementMaths"/>
+        <schema:name>Thomas Bernard</schema:name>
+        <schema:participant rdf:resource="http://www.example.org/university#examenML"/>
+        <schema:recipient rdf:resource="http://www.example.org/university#noteExamenML_Etudiant2"/>
+        <schema:telephone>+33612345679</schema:telephone>
+        <skos:related rdf:resource="http://www.example.org/university#Master1"/>
+        <vcard:hasAddress>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2006/vcard/ns#Address"/>
+                <vcard:country-name>France</vcard:country-name>
+                <vcard:locality>Ville Universitaire</vcard:locality>
+                <vcard:postal-code>75000</vcard:postal-code>
+                <vcard:street-address>Résidence Universitaire, Chambre 124</vcard:street-address>
+            </rdf:Description>
+        </vcard:hasAddress>
+        <foaf:birthday>1999-07-25</foaf:birthday>
+        <foaf:familyName>Bernard</foaf:familyName>
+        <foaf:givenName>Thomas</foaf:givenName>
+        <foaf:img rdf:resource="http://www.univ.fr/students/tbernard.jpg"/>
+        <foaf:interest rdf:resource="http://dbpedia.org/resource/Computer_science"/>
+        <foaf:interest rdf:resource="http://dbpedia.org/resource/Mathematics"/>
+        <foaf:knows rdf:resource="http://www.example.org/university#etudiant1"/>
+        <foaf:mbox rdf:resource="mailto:thomas.bernard@etudiant.univ.fr"/>
+        <foaf:name>Thomas Bernard</foaf:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/university#examenML -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/university#examenML">
+        <rdf:type rdf:resource="http://schema.org/Action"/>
+        <rdf:type rdf:resource="http://www.example.org/university#Examen"/>
+        <attribue rdf:resource="http://www.example.org/university#noteExamenML_Etudiant1"/>
+        <attribue rdf:resource="http://www.example.org/university#noteExamenML_Etudiant2"/>
+        <coefficient rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.6</coefficient>
+        <date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2023-12-15</date>
+        <duree>3h</duree>
+        <modalite>Sur table</modalite>
+        <type>Écrit</type>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2023-12-15</dc:date>
+        <dc:description xml:lang="fr">Examen écrit de Machine Learning, durée 3h</dc:description>
+        <dc:title xml:lang="fr">Examen de Machine Learning</dc:title>
+        <dc:type>Écrit</dc:type>
+        <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2023-11-01</dcterms:created>
+        <dcterms:creator rdf:resource="http://www.example.org/university#enseignant1"/>
+        <schema:duration>PT3H</schema:duration>
+        <schema:endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-15T12:00:00</schema:endTime>
+        <schema:location rdf:resource="http://www.example.org/university#salleA101"/>
+        <schema:result rdf:resource="http://www.example.org/university#noteExamenML_Etudiant1"/>
+        <schema:result rdf:resource="http://www.example.org/university#noteExamenML_Etudiant2"/>
+        <schema:startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-15T09:00:00</schema:startTime>
+        <schema:weight rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.6</schema:weight>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/university#moduleAlgo -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/university#moduleAlgo">
+        <rdf:type rdf:resource="http://purl.org/vocab/aiiso/schema#Module"/>
+        <rdf:type rdf:resource="http://www.example.org/university#Module"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="http://www.example.org/university#appartientA"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minCardinality>
+            </owl:Restriction>
+        </rdf:type>
+        <credits rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</credits>
+        <nomModule>Algorithmique</nomModule>
+        <teach:ects rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</teach:ects>
+        <dc:description xml:lang="fr">Module regroupant les cours liés à l&apos;algorithmique</dc:description>
+        <dc:title xml:lang="fr">Algorithmique</dc:title>
+        <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2023-01-01</dcterms:created>
+        <dcterms:identifier>MOD-ALGO-001</dcterms:identifier>
+        <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2023-05-01</dcterms:modified>
+        <schema:provider rdf:resource="http://www.example.org/university#departementInfo"/>
+        <skos:related rdf:resource="http://www.example.org/university#Informatique"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/university#moduleIA -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/university#moduleIA">
+        <rdf:type rdf:resource="http://purl.org/vocab/aiiso/schema#Module"/>
+        <rdf:type rdf:resource="http://www.example.org/university#Module"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <credits rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</credits>
+        <nomModule>Intelligence Artificielle</nomModule>
+        <teach:ects rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</teach:ects>
+        <dc:description xml:lang="fr">Module regroupant les cours liés à l&apos;intelligence artificielle</dc:description>
+        <dc:title xml:lang="fr">Intelligence Artificielle</dc:title>
+        <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2023-01-01</dcterms:created>
+        <dcterms:identifier>MOD-IA-001</dcterms:identifier>
+        <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2023-05-01</dcterms:modified>
+        <schema:provider rdf:resource="http://www.example.org/university#departementInfo"/>
+        <skos:related rdf:resource="http://www.example.org/university#IA"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/university#noteExamenML_Etudiant1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/university#noteExamenML_Etudiant1">
+        <rdf:type rdf:resource="http://schema.org/Rating"/>
+        <rdf:type rdf:resource="http://www.example.org/university#Note"/>
+        <note rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">16.5</note>
+        <dc:description xml:lang="fr">Note obtenue par Marie Lefebvre à l&apos;examen de Machine Learning</dc:description>
+        <dc:title xml:lang="fr">Note d&apos;examen ML de Marie Lefebvre</dc:title>
+        <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2023-12-20</dcterms:created>
+        <dcterms:creator rdf:resource="http://www.example.org/university#enseignant1"/>
+        <schema:about rdf:resource="http://www.example.org/university#examenML"/>
+        <schema:author rdf:resource="http://www.example.org/university#enseignant1"/>
+        <schema:ratingValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">16.5</schema:ratingValue>
+        <schema:reviewRating>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://schema.org/Rating"/>
+                <schema:bestRating rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">20</schema:bestRating>
+                <schema:ratingValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">16.5</schema:ratingValue>
+                <schema:worstRating rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0</schema:worstRating>
+            </rdf:Description>
+        </schema:reviewRating>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/university#noteExamenML_Etudiant2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/university#noteExamenML_Etudiant2">
+        <rdf:type rdf:resource="http://schema.org/Rating"/>
+        <rdf:type rdf:resource="http://www.example.org/university#Note"/>
+        <note rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">14.0</note>
+        <dc:description xml:lang="fr">Note obtenue par Thomas Bernard à l&apos;examen de Machine Learning</dc:description>
+        <dc:title xml:lang="fr">Note d&apos;examen ML de Thomas Bernard</dc:title>
+        <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2023-12-20</dcterms:created>
+        <dcterms:creator rdf:resource="http://www.example.org/university#enseignant1"/>
+        <schema:about rdf:resource="http://www.example.org/university#examenML"/>
+        <schema:author rdf:resource="http://www.example.org/university#enseignant1"/>
+        <schema:ratingValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">14.0</schema:ratingValue>
+        <schema:reviewRating>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://schema.org/Rating"/>
+                <schema:bestRating rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">20</schema:bestRating>
+                <schema:ratingValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">14.0</schema:ratingValue>
+                <schema:worstRating rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0</schema:worstRating>
+            </rdf:Description>
+        </schema:reviewRating>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/university#noteProjetDL_Etudiant1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/university#noteProjetDL_Etudiant1">
+        <rdf:type rdf:resource="http://schema.org/Rating"/>
+        <rdf:type rdf:resource="http://www.example.org/university#Note"/>
+        <note rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">18.0</note>
+        <dc:description xml:lang="fr">Note obtenue par Marie Lefebvre au projet de Deep Learning</dc:description>
+        <dc:title xml:lang="fr">Note de projet DL de Marie Lefebvre</dc:title>
+        <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2023-12-22</dcterms:created>
+        <dcterms:creator rdf:resource="http://www.example.org/university#enseignant1"/>
+        <schema:about rdf:resource="http://www.example.org/university#projetDL"/>
+        <schema:author rdf:resource="http://www.example.org/university#enseignant1"/>
+        <schema:ratingValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">18.0</schema:ratingValue>
+        <schema:reviewRating>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://schema.org/Rating"/>
+                <schema:bestRating rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">20</schema:bestRating>
+                <schema:ratingValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">18.0</schema:ratingValue>
+                <schema:worstRating rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0</schema:worstRating>
+            </rdf:Description>
+        </schema:reviewRating>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/university#projetDL -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/university#projetDL">
+        <rdf:type rdf:resource="http://schema.org/Action"/>
+        <rdf:type rdf:resource="http://www.example.org/university#Projet"/>
+        <attribue rdf:resource="http://www.example.org/university#noteProjetDL_Etudiant1"/>
+        <coefficient rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.4</coefficient>
+        <date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2023-12-20</date>
+        <dateDebut rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2023-11-01</dateDebut>
+        <dateFin rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2023-12-20</dateFin>
+        <type>Projet</type>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2023-12-20</dc:date>
+        <dc:description xml:lang="fr">Projet de Deep Learning sur l&apos;implémentation d&apos;un réseau de neurones</dc:description>
+        <dc:title xml:lang="fr">Projet de Deep Learning</dc:title>
+        <dc:type>Projet</dc:type>
+        <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2023-10-15</dcterms:created>
+        <dcterms:creator rdf:resource="http://www.example.org/university#enseignant1"/>
+        <schema:about>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://schema.org/DefinedTerm"/>
+                <schema:name xml:lang="fr">Réseaux de neurones convolutifs</schema:name>
+            </rdf:Description>
+        </schema:about>
+        <schema:endDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2023-12-20</schema:endDate>
+        <schema:result rdf:resource="http://www.example.org/university#noteProjetDL_Etudiant1"/>
+        <schema:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2023-11-01</schema:startDate>
+        <schema:weight rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.4</schema:weight>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/university#salleA101 -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/university#salleA101">
+        <rdf:type rdf:resource="http://schema.org/Room"/>
+        <rdf:type rdf:resource="http://www.example.org/university#Salle"/>
+        <capacite rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</capacite>
+        <numeroSalle>A101</numeroSalle>
+        <dc:description xml:lang="fr">Salle de cours située au premier étage du bâtiment A</dc:description>
+        <dc:title xml:lang="fr">Salle A101</dc:title>
+        <dcterms:identifier>A101</dcterms:identifier>
+        <schema:containedInPlace>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://schema.org/Building"/>
+                <schema:address>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://schema.org/PostalAddress"/>
+                        <schema:addressCountry>France</schema:addressCountry>
+                        <schema:addressLocality>Ville Universitaire</schema:addressLocality>
+                        <schema:postalCode>75000</schema:postalCode>
+                        <schema:streetAddress>123 Rue de l&apos;Université</schema:streetAddress>
+                    </rdf:Description>
+                </schema:address>
+                <schema:name>Bâtiment A</schema:name>
+            </rdf:Description>
+        </schema:containedInPlace>
+        <schema:maximumAttendeeCapacity rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</schema:maximumAttendeeCapacity>
+        <geo:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#float">48.8566</geo:lat>
+        <geo:long rdf:datatype="http://www.w3.org/2001/XMLSchema#float">2.3522</geo:long>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/university#salleB201 -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/university#salleB201">
+        <rdf:type rdf:resource="http://schema.org/Room"/>
+        <rdf:type rdf:resource="http://www.example.org/university#Salle"/>
+        <capacite rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30</capacite>
+        <numeroSalle>B201</numeroSalle>
+        <dc:description xml:lang="fr">Salle de cours située au deuxième étage du bâtiment B</dc:description>
+        <dc:title xml:lang="fr">Salle B201</dc:title>
+        <dcterms:identifier>B201</dcterms:identifier>
+        <schema:containedInPlace>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://schema.org/Building"/>
+                <schema:address>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://schema.org/PostalAddress"/>
+                        <schema:addressCountry>France</schema:addressCountry>
+                        <schema:addressLocality>Ville Universitaire</schema:addressLocality>
+                        <schema:postalCode>75000</schema:postalCode>
+                        <schema:streetAddress>124 Rue de l&apos;Université</schema:streetAddress>
+                    </rdf:Description>
+                </schema:address>
+                <schema:name>Bâtiment B</schema:name>
+            </rdf:Description>
+        </schema:containedInPlace>
+        <schema:maximumAttendeeCapacity rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30</schema:maximumAttendeeCapacity>
+        <geo:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#float">48.8567</geo:lat>
+        <geo:long rdf:datatype="http://www.w3.org/2001/XMLSchema#float">2.3523</geo:long>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/university#semestre1_2023 -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/university#semestre1_2023">
+        <rdf:type rdf:resource="http://www.example.org/university#Semestre"/>
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Interval"/>
+        <annee>2023-2024</annee>
+        <numeroSemestre rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</numeroSemestre>
+        <dc:description xml:lang="fr">Premier semestre de l&apos;année universitaire 2023-2024</dc:description>
+        <dc:title xml:lang="fr">Premier semestre 2023-2024</dc:title>
+        <dcterms:identifier>S1-2023-2024</dcterms:identifier>
+        <dcterms:temporal>2023-2024</dcterms:temporal>
+        <time:hasBeginning>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+                <time:inXSDDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2023-09-01</time:inXSDDate>
+            </rdf:Description>
+        </time:hasBeginning>
+        <time:hasEnd>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+                <time:inXSDDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-01-31</time:inXSDDate>
+            </rdf:Description>
+        </time:hasEnd>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.example.org/university#Enseignant"/>
+            <rdf:Description rdf:about="http://www.example.org/university#Etudiant"/>
+        </owl:intersectionOf>
+        <rdfs:subClassOf rdf:resource="http://schema.org/Person"/>
+    </owl:Class>
+    <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.example.org/university#Enseignant"/>
+            <rdf:Description rdf:about="http://www.example.org/university#Etudiant"/>
+        </owl:intersectionOf>
+        <rdfs:subClassOf rdf:resource="http://www.example.org/university#Enseignant"/>
+    </owl:Class>
+    <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.example.org/university#Enseignant"/>
+            <rdf:Description rdf:about="http://www.example.org/university#Etudiant"/>
+        </owl:intersectionOf>
+        <rdfs:subClassOf rdf:resource="http://www.example.org/university#Personne"/>
+    </owl:Class>
+    <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.example.org/university#Enseignant"/>
+            <rdf:Description rdf:about="http://www.example.org/university#Etudiant"/>
+        </owl:intersectionOf>
+        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    </owl:Class>
+    <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.example.org/university#Enseignant"/>
+            <rdf:Description rdf:about="http://www.example.org/university#Etudiant"/>
+        </owl:intersectionOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.example.org/university#Enseignant"/>
+                    <rdf:Description rdf:about="http://www.example.org/university#PersonnelAdministratif"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.example.org/university#Enseignant"/>
+            <rdf:Description rdf:about="http://www.example.org/university#Etudiant"/>
+        </owl:intersectionOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.example.org/university#suit"/>
+                <owl:someValuesFrom rdf:resource="http://www.example.org/university#Cours"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.example.org/university#Enseignant"/>
+            <rdf:Description rdf:about="http://www.example.org/university#Etudiant"/>
+        </owl:intersectionOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.example.org/university#estInscritA"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Rules
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="e">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="c">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="ev">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="m">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="n">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="valeur">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:label>S1</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.example.org/university#Enseignant"/>
+                        <swrl:argument1 rdf:resource="e"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="http://www.example.org/university#Cours"/>
+                                <swrl:argument1 rdf:resource="c"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://www.example.org/university#enseigne"/>
+                                        <swrl:argument1 rdf:resource="e"/>
+                                        <swrl:argument2 rdf:resource="c"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                <swrl:propertyPredicate rdf:resource="http://www.example.org/university#estÉvaluéPar"/>
+                                                <swrl:argument1 rdf:resource="c"/>
+                                                <swrl:argument2 rdf:resource="ev"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                        <swrl:classPredicate rdf:resource="http://www.example.org/university#Evaluation"/>
+                                                        <swrl:argument1 rdf:resource="ev"/>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.example.org/university#PrépareÉvaluation"/>
+                        <swrl:argument1 rdf:resource="e"/>
+                        <swrl:argument2 rdf:resource="ev"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:label>S2</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.example.org/university#Etudiant"/>
+                        <swrl:argument1 rdf:resource="e"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="http://www.example.org/university#Module"/>
+                                <swrl:argument1 rdf:resource="m"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://www.example.org/university#suit"/>
+                                        <swrl:argument1 rdf:resource="e"/>
+                                        <swrl:argument2 rdf:resource="c"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                <swrl:propertyPredicate rdf:resource="http://www.example.org/university#faitPartieDe"/>
+                                                <swrl:argument1 rdf:resource="c"/>
+                                                <swrl:argument2 rdf:resource="m"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                        <swrl:propertyPredicate rdf:resource="http://www.example.org/university#reçoitNote"/>
+                                                        <swrl:argument1 rdf:resource="e"/>
+                                                        <swrl:argument2 rdf:resource="n"/>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                        <rdf:first>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                                <swrl:classPredicate rdf:resource="http://www.example.org/university#Note"/>
+                                                                <swrl:argument1 rdf:resource="n"/>
+                                                            </rdf:Description>
+                                                        </rdf:first>
+                                                        <rdf:rest>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                <rdf:first>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                                                        <swrl:propertyPredicate rdf:resource="http://www.example.org/university#note"/>
+                                                                        <swrl:argument1 rdf:resource="n"/>
+                                                                        <swrl:argument2 rdf:resource="valeur"/>
+                                                                    </rdf:Description>
+                                                                </rdf:first>
+                                                                <rdf:rest>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                        <rdf:first>
+                                                                            <rdf:Description>
+                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                                                                <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#greaterThan"/>
+                                                                                <swrl:arguments>
+                                                                                    <rdf:Description>
+                                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                        <rdf:first rdf:resource="valeur"/>
+                                                                                        <rdf:rest>
+                                                                                            <rdf:Description>
+                                                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</rdf:first>
+                                                                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                                                            </rdf:Description>
+                                                                                        </rdf:rest>
+                                                                                    </rdf:Description>
+                                                                                </swrl:arguments>
+                                                                            </rdf:Description>
+                                                                        </rdf:first>
+                                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                                    </rdf:Description>
+                                                                </rdf:rest>
+                                                            </rdf:Description>
+                                                        </rdf:rest>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.example.org/university#aRéussiModule"/>
+                        <swrl:argument1 rdf:resource="e"/>
+                        <swrl:argument2 rdf:resource="m"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
