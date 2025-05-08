@@ -6,6 +6,7 @@ L'éducation, en tant que secteur en constante évolution, génère une multitud
 
 Le projet a été développé avec l'outil Protégé, en utilisant des namespaces standards pour garantir l'interopérabilité et la réutilisation des données.
 
+
 🎯 Objectifs du projet
 
 Modéliser les entités du domaine de l'éducation sous forme d'ontologie.
@@ -13,6 +14,7 @@ Permettre l’inférence de nouvelles connaissances à partir des faits existant
 Utiliser RDF, RDFS, OWL et SPARQL pour la gestion et la requête des données.
 Appliquer des namespaces standards tels que XML Schema, Dublin Core, FOAF, SKOS, RDFS, et OWL pour structurer et enrichir les données.
 Faciliter l'accès aux informations académiques et améliorer l'interopérabilité des systèmes éducatifs.
+
 
 🧠 Apports de l'ontologie
 
@@ -26,21 +28,32 @@ Faciliter l'accès aux informations académiques et améliorer l'interopérabili
 
 **Requêtes complexes** : SPARQL permet d’interroger des relations directes, indirectes et inférées, difficilement faisables avec SQL. Cette ontologie offre une vue globale et structurée des entités éducatives et leurs interactions.
 
+
 🛠️ Technologies utilisées
 
 Protégé est un Outil de développement pour les ontologies.
+
 **RDF (Resource Description Framework)** est un modèle de données pour la description des ressources et des relations entre elles.
+
 **RDFS (RDF Schema)** est un vocabulaire pour définir les relations entre les ressources RDF.
+
 **OWL (Web Ontology Language)** est un langage de modélisation sémantique qui permet de définir des ontologies et des relations complexes entre les concepts.
+
 **SPARQL** est un Langage de requête pour interroger les données RDF.
+
 **SWRL (Semantic Web Rule Language)** est un langage qui permet d’exprimer des règles logiques sous forme d’implications afin d’inférer de nouvelles connaissances à partir des faits déjà présents dans l’ontologie.
+
 
 🧭 Namespaces utilisés
 
 **xsd (XML Schema)** définit les types de données XML : [http://www.w3.org/2001/XMLSchema#]
+
 **dc (Dublin Core)** est un ensemble de métadonnées standardisé pour décrire les ressources sur le web, y compris le titre, l'auteur, la date, etc : [http://purl.org/dc/elements/1.1/]
+
 **FOAF (Friend of a Friend)** est un vocabulaire RDF utilisé pour décrire des personnes, leurs relations et leurs activités sur le web : [http://xmlns.com/foaf/0.1/]
+
 **SKOS (Simple Knowledge Organization System)** est un modèle RDF pour représenter des vocabulaires contrôlés et des thésaurus, facilitant l'organisation des connaissances. : [http://www.w3.org/2004/02/skos/core#]
+
 **RDFS** est un vocabulaire RDF utilisé pour définir des classes, des propriétés et des relations entre les ressources : [http://www.w3.org/2000/01/rdf-schema#]
 
 💻 Installation et utilisation 
