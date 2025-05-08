@@ -1,0 +1,46 @@
+##############################################
+# Fichier : regles_swrl.txt
+# Description : Règles SWRL pour enrichir l’ontologie du système universitaire
+# Auteur : Oumayma Khlif && Saba Kallel
+##############################################
+
+# ---------------------------------------------------------
+# 1. Préparation d’une évaluation
+# Cette règle SWRL permet de déduire qu’un enseignant prépare une évaluation
+# s’il enseigne un cours qui est évalué par cette évaluation.
+# ---------------------------------------------------------
+
+Règle SWRL :
+univ:Enseignant(?e) ^ 
+univ:Cours(?c) ^ 
+univ:enseigne(?e, ?c) ^ 
+univ:estÉvaluéPar(?c, ?ev) ^ 
+univ:Evaluation(?ev) 
+-> 
+univ:PrépareÉvaluation(?e, ?ev)
+
+Explication :
+Si une personne ?e est un enseignant, et s’il enseigne un cours ?c, et que ce cours est évalué par une évaluation ?ev,  
+alors on peut déduire que cet enseignant prépare cette évaluation.
+
+# ---------------------------------------------------------
+# 2. Réussite d’un module par un étudiant
+# Cette règle SWRL déduit qu’un étudiant a réussi un module s’il suit un cours du module,
+# a reçu une note pour ce cours, et que la note est strictement supérieure à 10.
+# ---------------------------------------------------------
+
+Règle SWRL :
+univ:Etudiant(?e) ^ 
+univ:Module(?m) ^ 
+univ:suit(?e, ?c) ^ 
+univ:faitPartieDe(?c, ?m) ^ 
+univ:reçoitNote(?e, ?n) ^ 
+univ:Note(?n) ^ 
+univ:note(?n, ?valeur) ^ 
+swrlb:greaterThan(?valeur, 10) 
+-> 
+univ:aRéussiModule(?e, ?m)
+
+Explication :
+Si un individu ?e est un étudiant, qu’il suit un cours ?c appartenant à un module ?m, qu’il a reçu une note ?n pour ce cours,  
+et que la valeur de cette note est strictement supérieure à 10, alors on considère qu’il a réussi le module ?m.
