@@ -56,11 +56,16 @@ Protégé est un Outil de développement pour les ontologies.
 
 **RDFS** est un vocabulaire RDF utilisé pour définir des classes, des propriétés et des relations entre les ressources : [http://www.w3.org/2000/01/rdf-schema#]
 
-💻 Installation et utilisation 
+💻 Installation et utilisation
+
 ✅ Prérequis Avant de pouvoir utiliser le projet, vous devez installer Protégé, un outil qui vous permet de visualiser et de manipuler des ontologies. 
+
 🔽 Installation de Protégé 
+
 🔗 Télécharger depuis : protege.stanford.edu 
+
 🖥️ Installer selon votre système (Windows/macOS/Linux)
+
 
 📂 Importation de l'ontologie dans Protégé
 
@@ -69,16 +74,22 @@ Protégé est un Outil de développement pour les ontologies.
 3. Télécharger le fichier .rdf depuis le dépôt GitHub.
 4. Charger le fichier.
 5. 🎉 Visualisez la structure (classes, propriétés, graphes, inférences…).
+
    
 🔍Visualisation Dans Protégé, vous pouvez :
 
 Voir les classes (Étudiant, Enseignant, etc.).
+
 Explorer les instances (individus concrets).
+
 Examiner les propriétés reliant les entités.
+
 Visualiser des graphes relationnels.
+
 Écrire et exécuter des requêtes SPARQL pour interroger les données. 
 
 📄 Note : Un fichier nommé requêtes_sparql.txt contenant plusieurs exemples de requêtes SPARQL est déjà présent dans ce dépôt. Tu peux le consulter pour explorer l’ontologie directement depuis Protégé.
+
 
 ⚙️Règles SWRL et Raisonnement avec Pellet
 
@@ -95,11 +106,13 @@ Vous pouvez également définir des règles SWRL (Semantic Web Rule Language) po
 5. Redémarrez Protégé.
 6. Activez-le ensuite via le menu Reasoner > Pellet Reasoner, puis cliquez sur Start reasoner.
    
+   
 📦 Clonage du projet Pour cloner ce projet, suivez ces étapes :
 
 Ouvrez votre terminal ou invite de commande.
 Exécutez la commande suivante pour cloner le dépôt :
-git clone https://github.com/OumaymaKhlif/University-Ontology-Project.git
+git clone https://github.com/kallelsaba/WebSemantique.git
+
 
 ✨ Auteurs
 
