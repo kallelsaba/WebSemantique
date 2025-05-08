@@ -102,4 +102,22 @@ WHERE {
 }
 ORDER BY ?etudiant ?attributManquant
 
+# ---------------------------------------------------------
+# 5. Afficher les étudiants, les notes reçues et leur valeur
+Cette requête permet d’afficher les étudiants qui ont reçu des notes, ainsi que la valeur de chaque note.
+Elle exploite la relation entre les étudiants et les notes via la propriété `reçoitNote`, puis extrait la valeur de la note.
+# ---------------------------------------------------------
+
+PREFIX univ: <http://www.example.org/university#>
+
+SELECT ?etudiant ?note ?valeur
+WHERE {
+  ?etudiant a univ:Etudiant .
+  ?etudiant univ:recoit?note .
+  ?note a univ:Note .
+  ?note univ:note ?valeur .
+}
+ORDER BY ?etudiant
+
+
 # Fin du fichier
