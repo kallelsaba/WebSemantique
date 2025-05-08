@@ -17,9 +17,13 @@ Faciliter l'accès aux informations académiques et améliorer l'interopérabili
 🧠 Apports de l'ontologie
 
 **Inférence de connaissances**: Grâce aux règles SWRL et aux capacités d'inférence d'OWL, l'ontologie peut déduire de nouvelles relations qui ne sont pas explicitement définies.
+
 **Flexibilité du modèle** : L'ontologie permet d'ajouter de nouveaux concepts et relations sans avoir à restructurer l'ensemble du modèle.
+
 **Interopérabilité** : L’utilisation des standards du Web Sémantique permet une intégration facile avec d’autres sources de données.
+
 **Richesse sémantique** : L'ontologie capture non seulement les données, mais aussi leur signification et leurs relations.
+
 **Requêtes complexes** : SPARQL permet d’interroger des relations directes, indirectes et inférées, difficilement faisables avec SQL. Cette ontologie offre une vue globale et structurée des entités éducatives et leurs interactions.
 
 🛠️ Technologies utilisées
@@ -85,5 +89,7 @@ Exécutez la commande suivante pour cloner le dépôt :
 git clone https://github.com/OumaymaKhlif/University-Ontology-Project.git
 
 ✨ Auteurs
+
 **Saba Kallel**
+
 **Oumayma Khlif**
